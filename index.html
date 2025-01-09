@@ -15,6 +15,7 @@
             padding: 0;
             background-color: #ffffff;
             color: #333333;
+            scroll-behavior: smooth; /* Smooth scrolling for the entire page */
         }
 
         header {
@@ -271,26 +272,9 @@
                 <div class="company-card">
                     <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
                     <h3>Budounoki Ltd.</h3>
-                    <p>Discover the excellence of Japanese confectionery.</p>
-                    <a href="http://budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
+                    <p>Leading provider of premium cakes and confections worldwide.</p>
+                    <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="testimonial">
-            <h2>What Our Customers Say</h2>
-            <p>"The most beautiful and delicious cakes I've ever had!"</p>
-        </section>
-
-        <section class="team">
-            <h2>Meet Our Team</h2>
-            <div>
-                <img src="https://via.placeholder.com/100" alt="John Doe">
-                <p>John Doe - Lead Chef</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/100" alt="Jane Smith">
-                <p>Jane Smith - Designer</p>
             </div>
         </section>
 
@@ -318,6 +302,17 @@
                 scrollTopButton.style.display = "none";
             }
         }
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
