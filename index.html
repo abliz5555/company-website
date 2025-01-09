@@ -71,13 +71,13 @@
             margin: auto;
             padding: 20px;
         }
-        .products, .external-websites {
+        .products, .company-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 50px 0;
         }
-        .product, .website {
+        .product, .company-card {
             width: 30%;
             margin-bottom: 20px;
             text-align: center;
@@ -86,21 +86,22 @@
             overflow: hidden;
             transition: transform 0.3s;
         }
-        .product:hover, .website:hover {
+        .product:hover, .company-card:hover {
             transform: scale(1.05);
         }
-        .product img, .website img {
+        .product img, .company-card img {
             width: 100%;
             height: auto;
             border-bottom: 3px solid #f4f4f4;
         }
-        .product h3, .website h3 {
+        .product h3, .company-card h3 {
             font-size: 1.5em;
             margin: 20px 0 10px;
         }
-        .product p, .website p {
+        .product p, .company-card p {
             font-size: 1.2em;
             color: #777;
+            padding: 0 10px;
         }
         .testimonial {
             background: linear-gradient(45deg, #ffd700, #ffa500);
@@ -148,6 +149,56 @@
         .scroll-top:hover {
             background: #ffd700;
         }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .product, .company-card {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .cta-button {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+            .testimonial p {
+                font-size: 1.2em;
+            }
+            .team img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1.1em;
+            }
+            .cta-button {
+                font-size: 0.9em;
+            }
+            .testimonial p {
+                font-size: 1.1em;
+            }
+            .team img {
+                width: 70px;
+                height: 70px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,7 +211,7 @@
     <nav>
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
-        <a href="#external-websites">Our Partners</a>
+        <a href="#company">Our Company</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -192,19 +243,19 @@
             </div>
         </section>
 
-        <section id="external-websites">
-            <h2>Our Partners</h2>
-            <div class="external-websites">
-                <div class="website">
+        <section id="company">
+            <h2>Our Company</h2>
+            <div class="company-section">
+                <div class="company-card">
                     <img src="https://via.placeholder.com/400x300" alt="Katanuki-ya Website">
                     <h3>Katanuki-ya</h3>
                     <p>Explore the world of traditional Japanese cakes and desserts.</p>
                     <a href="https://www.katanuki-ya.com" target="_blank" class="cta-button">Visit Website</a>
                 </div>
-                <div class="website">
-                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Ltd. Website">
+                <div class="company-card">
+                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
                     <h3>Budounoki Ltd.</h3>
-                    <p>Learn more about our global dessert brand and heritage.</p>
+                    <p>Discover more about our parent company and heritage.</p>
                     <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
                 </div>
             </div>
@@ -232,7 +283,6 @@
             <p>Have questions? Reach out to us:</p>
             <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
             <p>Phone: +971-XXX-XXXX</p>
-            <p>Visit our parent company websites: <a href="http://www.katanuki-ya.com" target="_blank">www.katanuki-ya.com</a> | <a href="http://budounoki.co.jp" target="_blank">budounoki.co.jp</a></p>
         </section>
     </div>
 
@@ -240,10 +290,7 @@
         <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
     </footer>
 
-    <!-- Scroll Top Button -->
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">
-        ↑
-    </div>
+    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
 
     <script>
         // Show Scroll Top Button when scrolled down
