@@ -260,25 +260,28 @@
             <p>Have questions? Reach out to us:</p>
             <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
             <p>Phone: +971-XXX-XXXX</p>
+            <p>Visit our parent company websites: <a href="http://www.katanuki-ya.com" target="_blank">www.katanuki-ya.com</a> | <a href="http://budounoki.co.jp" target="_blank">budounoki.co.jp</a></p>
         </section>
     </div>
-
     <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
+        <p>&copy; 2025 Grape Tree FZE, a Branch of Budounoki Ltd. All Rights Reserved.</p>
     </footer>
-
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
-
+    <div class="scroll-top" id="scrollTop">&#8679;</div>
     <script>
-        // Show Scroll Top Button when Scrolled Down
-        window.onscroll = function () {
-            var scrollTopButton = document.querySelector('.scroll-top');
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
+        // Scroll to Top Functionality
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
             } else {
-                scrollTopButton.style.display = "none";
+                scrollTopBtn.style.display = 'none';
             }
-        };
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
