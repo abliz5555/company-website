@@ -82,14 +82,14 @@
         /* Adjust layout for products and company sections */
         .products, .company-section {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between; /* Space between the product cards */
             padding: 50px 0;
+            flex-wrap: wrap; /* Ensures wrapping for small screens */
         }
 
-        /* Product card size and spacing */
-        .product {
-            width: 30%; /* Reduced from 40% for better spacing */
+        /* Product and company card size and styling */
+        .product, .company-card {
+            width: 30%; /* Set width of the cards to 30% */
             margin-bottom: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -98,20 +98,20 @@
             transition: transform 0.3s;
             padding: 10px;
         }
-        .product:hover {
+        .product:hover, .company-card:hover {
             transform: scale(1.05);
         }
 
-        .product img {
+        .product img, .company-card img {
             width: 100%;
             height: auto;
             border-bottom: 3px solid #f4f4f4;
         }
-        .product h3 {
+        .product h3, .company-card h3 {
             font-size: 1.5em;
             margin: 20px 0 10px;
         }
-        .product p {
+        .product p, .company-card p {
             font-size: 1.2em;
             color: #777;
             padding: 0 10px;
@@ -177,7 +177,7 @@
                 font-size: 0.8em;
             }
 
-            .product {
+            .product, .company-card {
                 width: 45%; /* Adjusted for smaller screens */
             }
 
@@ -276,8 +276,8 @@
                 </div>
                 <div class="company-card">
                     <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
-                    <h3>Budounoki Ltd.</h3>
-                    <p>Leading provider of premium cakes and confections worldwide.</p>
+                    <h3>Budounoki</h3>
+                    <p>Discover premium cakes and desserts worldwide.</p>
                     <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
                 </div>
             </div>
@@ -321,6 +321,7 @@
     </script>
 </body>
 </html>
+
 
 
 
