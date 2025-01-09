@@ -292,28 +292,37 @@
 
     <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
 
-    <script>
-        // Show Scroll Top Button when scrolled down
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
-            } else {
-                scrollTopButton.style.display = "none";
-            }
+   <script>
+    // Show Scroll Top Button when scrolled down
+    window.onscroll = function() {
+        var scrollTopButton = document.querySelector(".scroll-top");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollTopButton.style.display = "block";
+        } else {
+            scrollTopButton.style.display = "none";
         }
+    }
 
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-    </script>
+    });
+
+    // Smooth Scroll for Scroll to Top Button
+    document.querySelector('.scroll-top').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.documentElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+</script>
 </body>
 </html>
 
