@@ -168,17 +168,9 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-            nav {
-                justify-content: center;
-            }
-            nav a {
-                margin: 0 5px;
-                font-size: 0.8em;
-            }
-
             .product, .company-card {
-                width: 100%;
-                margin-bottom: 30px;
+                width: 45%; /* Adjusted width for better appearance on mobile */
+                margin-bottom: 20px;
                 box-sizing: border-box;
             }
 
@@ -209,6 +201,11 @@
         }
 
         @media (max-width: 480px) {
+            .product, .company-card {
+                width: 100%; /* Full width on smaller screens */
+                margin-bottom: 20px;
+            }
+
             header h1 {
                 font-size: 2em;
             }
@@ -278,66 +275,40 @@
                     <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
                     <h3>Budounoki Ltd.</h3>
                     <p>Leading provider of premium cakes and confections worldwide.</p>
-                    <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
+                    <a href="https://www.budounoki.com" target="_blank" class="cta-button">Visit Website</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us:</p>
-            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
+        <section id="testimonial" class="testimonial">
+            <p>"The best cakes and desserts I've ever tasted! Truly a taste of Japan!"</p>
+        </section>
+
+        <section id="team" class="team">
+            <h2>Meet Our Team</h2>
+            <div>
+                <img src="https://via.placeholder.com/100" alt="Team Member 1">
+                <img src="https://via.placeholder.com/100" alt="Team Member 2">
+                <img src="https://via.placeholder.com/100" alt="Team Member 3">
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
+        <p>© 2025 Grape Tree FZE | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
     </footer>
 
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
 
     <script>
-        // Show Scroll Top Button when scrolled down
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
+        // Scroll to top button visibility
+        window.addEventListener('scroll', function() {
+            const scrollTopButton = document.querySelector('.scroll-top');
+            if (window.scrollY > 300) {
+                scrollTopButton.style.display = 'block';
             } else {
-                scrollTopButton.style.display = "none";
+                scrollTopButton.style.display = 'none';
             }
-        }
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add active class to navigation links on scroll
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-
-        window.addEventListener('scroll', () => {
-            let currentSection = '';
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(currentSection)) {
-                    link.classList.add('active');
-                }
-            });
         });
     </script>
 </body>
