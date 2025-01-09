@@ -15,18 +15,16 @@
             padding: 0;
             background-color: #ffffff;
             color: #333333;
-            scroll-behavior: smooth; /* Smooth scrolling for the entire page */
         }
-
         header {
+            position: relative;
             background-image: url('https://via.placeholder.com/1200x600'); /* Hero background image */
             background-size: cover;
             background-position: center;
             height: 60vh;
-            color: #fff;
             text-align: center;
-            padding: 20px;
-            position: relative;
+            color: #fff;
+            padding: 0 20px;
         }
         header h1 {
             font-size: 3em;
@@ -50,12 +48,11 @@
         .cta-button:hover {
             background-color: #ffcc00;
         }
-
         nav {
             display: flex;
-            justify-content: center; /* Center the nav links */
+            justify-content: center;
             background-color: #444;
-            padding: 10px 20px;
+            padding: 10px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -65,29 +62,25 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 1em;
-            padding: 10px;
         }
         nav a:hover {
             color: #ffd700;
         }
-
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            text-align: center; /* Centering the content inside container */
         }
 
         /* Adjust layout for products and company sections */
         .products, .company-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the content */
+            justify-content: space-between;
             padding: 50px 0;
         }
         .product, .company-card {
-            width: 48%;
+            width: 48%; /* Reduced by about 30% */
             margin-bottom: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -131,7 +124,6 @@
             height: 100px;
             margin: 10px;
         }
-
         footer {
             background-color: #333;
             color: white;
@@ -145,7 +137,6 @@
         footer a:hover {
             color: #ffd700;
         }
-
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -163,14 +154,19 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
+            /* Mobile Navigation */
             nav {
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
             }
             nav a {
-                margin: 0 5px;
-                font-size: 0.8em;
+                margin: 10px 0;
+                font-size: 1.5em;
+                text-align: center;
             }
 
+            /* Product and Company Card Layout */
             .product, .company-card {
                 width: 100%;
                 margin-bottom: 30px;
@@ -197,7 +193,6 @@
                 width: 80px;
                 height: 80px;
             }
-
             footer {
                 font-size: 1em;
             }
@@ -266,66 +261,62 @@
                 <div class="company-card">
                     <img src="https://via.placeholder.com/400x300" alt="Katanuki-ya Website">
                     <h3>Katanuki-ya</h3>
-                    <p>Explore the world of traditional Japanese cakes and desserts.</p>
-                    <a href="https://www.katanuki-ya.com" target="_blank" class="cta-button">Visit Website</a>
+                    <p>Our sister company that specializes in artisanal sweets and unique dessert experiences.</p>
                 </div>
                 <div class="company-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
-                    <h3>Budounoki Ltd.</h3>
-                    <p>Leading provider of premium cakes and confections worldwide.</p>
-                    <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
+                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Ltd">
+                    <h3>Budounoki Ltd</h3>
+                    <p>Our parent company, based in Japan, known for its prestigious dessert offerings.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="testimonial">
+            <div class="testimonial">
+                <p>"The best custom cakes we've ever had. Beautifully designed and delicious!"</p>
+                <p>- Happy Customer</p>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us:</p>
-            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
+            <p>Email: info@grapetreefze.com | Phone: +971 123 456 789</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
+        <p>&copy; 2025 Grape Tree FZE, All Rights Reserved</p>
     </footer>
 
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
+    <div class="scroll-top">↑</div>
 
-<script>
-    // Show Scroll Top Button when scrolled down
-    window.onscroll = function() {
-        var scrollTopButton = document.querySelector(".scroll-top");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollTopButton.style.display = "block";
-        } else {
-            scrollTopButton.style.display = "none";
-        }
-    }
-
-    // Smooth Scroll for Navigation Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <script>
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-    });
 
-    // Smooth Scroll for Scroll to Top Button
-    document.querySelector('.scroll-top').addEventListener('click', function (e) {
-        e.preventDefault();
-        // Scroll smoothly to the top of the page
-        document.documentElement.scrollTop = 0; // This targets the HTML document's top
-        document.body.scrollTop = 0; // This targets the body element's top
-    });
-</script>
+        // Scroll Top Button Visibility and Smooth Scroll
+        window.onscroll = function() {
+            var scrollTopButton = document.querySelector(".scroll-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        };
 
-
+        document.querySelector('.scroll-top').addEventListener('click', function () {
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        });
+    </script>
 </body>
 </html>
+
 
 
 
