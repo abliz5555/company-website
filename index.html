@@ -315,14 +315,15 @@
     });
 
     // Smooth Scroll for Scroll to Top Button
-    document.querySelector('.scroll-top').addEventListener('click', function (e) {
+    document.querySelector('.scroll-top').addEventListener('click', function(e) {
         e.preventDefault();
-        document.documentElement.scrollIntoView({
+        document.querySelector('body').scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
     });
 </script>
+
 </body>
 </html>
 
