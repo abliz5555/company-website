@@ -10,12 +10,11 @@
     <style>
         /* General Styles */
         body {
-            font-family: 'Poppins', sans-serif; /* Creative font */
+            font-family: 'Comic Sans MS', sans-serif; /* Cute font */
             margin: 0;
             padding: 0;
             background-color: #ffffff;
             color: #333333;
-            text-align: center; /* Centering all text */
         }
         header {
             position: relative;
@@ -61,9 +60,9 @@
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 10px; /* Reduced space between links */
+            margin: 0 15px;
             font-weight: bold;
-            font-size: 1.1em; /* Reduced font size */
+            font-size: 1.2em;
         }
         nav a:hover {
             color: #ffd700;
@@ -79,7 +78,7 @@
         .products, .company-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the content */
+            justify-content: space-between;
             padding: 50px 0;
         }
         .product, .company-card {
@@ -231,6 +230,7 @@
     <nav>
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
+        <a href="https://www.katanuki-ya.com" target="_blank">Our Products</a> <!-- New link to other website's products -->
         <a href="#contact">Contact</a>
     </nav>
 
@@ -244,6 +244,11 @@
             <h2>About Us</h2>
             <p>Grape Tree FZE is the UAE branch of Budounoki Ltd., a leading Japanese company renowned for its premium-quality cakes and desserts. With roots in Japan, Budounoki Ltd. has a legacy of excellence, blending traditional techniques with modern innovation.</p>
             <p>Our branch in the Sharjah Airport Free Zone specializes in producing and exporting unique custom cakes, ensuring the same level of craftsmanship and quality that Budounoki Ltd. is known for globally.</p>
+            <p>For more information about our other businesses, visit our other websites:</p>
+            <ul>
+                <li><a href="https://www.katanuki-ya.com" target="_blank" style="text-decoration: underline;">Katanuki-ya</a></li>
+                <li><a href="http://budounoki.co.jp" target="_blank" style="text-decoration: underline;">Budounoki Ltd.</a></li>
+            </ul>
         </section>
 
         <section id="products">
@@ -281,28 +286,27 @@
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Have questions or special requests? Contact us today!</p>
-            <p>Email: contact@grapetreefze.com</p>
-            <p>Phone: +971-123-4567</p>
+            <p>Have questions? Reach out to us:</p>
+            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
+            <p>Phone: +971-XXX-XXXX</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Grape Tree FZE, a branch of Budounoki Ltd. All rights reserved.</p>
-        <p><a href="#about">About Us</a> | <a href="#contact">Contact</a></p>
+        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
     </footer>
 
     <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
 
     <script>
-        // Scroll top button
         window.onscroll = function() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.querySelector('.scroll-top').style.display = "block";
+            var scrollTopButton = document.querySelector(".scroll-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopButton.style.display = "block";
             } else {
-                document.querySelector('.scroll-top').style.display = "none";
+                scrollTopButton.style.display = "none";
             }
-        };
+        }
     </script>
 </body>
 </html>
