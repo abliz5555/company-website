@@ -7,10 +7,11 @@
     <meta name="keywords" content="cakes, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
     <meta name="author" content="Budounoki Ltd.">
     <title>Grape Tree FZE - Budounoki Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
@@ -70,6 +71,10 @@
         }
         nav a:hover {
             color: #ffd700;
+        }
+
+        nav a.active {
+            color: #ffd700; /* Active link color */
         }
 
         .container {
@@ -311,6 +316,27 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Add active class to navigation links on scroll
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(currentSection)) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
