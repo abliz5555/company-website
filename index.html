@@ -7,11 +7,10 @@
     <meta name="keywords" content="cakes, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
     <meta name="author" content="Budounoki Ltd.">
     <title>Grape Tree FZE - Budounoki Ltd.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
@@ -73,10 +72,6 @@
             color: #ffd700;
         }
 
-        nav a.active {
-            color: #ffd700; /* Active link color */
-        }
-
         .container {
             max-width: 1200px;
             margin: auto;
@@ -91,32 +86,37 @@
             justify-content: center; /* Center the content */
             padding: 50px 0;
         }
-        .product, .company-card {
-            width: 48%;
+
+        /* Reduced size of product cards */
+        .product {
+            width: 40%; /* Reduced from 48% */
             margin-bottom: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s;
+            padding: 10px; /* Reduced padding */
         }
-        .product:hover, .company-card:hover {
+        .product:hover {
             transform: scale(1.05);
         }
-        .product img, .company-card img {
+
+        .product img {
             width: 100%;
             height: auto;
             border-bottom: 3px solid #f4f4f4;
         }
-        .product h3, .company-card h3 {
+        .product h3 {
             font-size: 1.5em;
             margin: 20px 0 10px;
         }
-        .product p, .company-card p {
+        .product p {
             font-size: 1.2em;
             color: #777;
             padding: 0 10px;
         }
+
         .testimonial {
             background: linear-gradient(45deg, #ffd700, #ffa500);
             color: #fff;
@@ -127,6 +127,7 @@
         .testimonial p {
             font-style: italic;
         }
+
         .team {
             text-align: center;
         }
@@ -176,10 +177,8 @@
                 font-size: 0.8em;
             }
 
-            .product, .company-card {
-                width: 100%;
-                margin-bottom: 30px;
-                box-sizing: border-box;
+            .product {
+                width: 45%; /* Adjusted for smaller screens */
             }
 
             header h1 {
@@ -318,30 +317,10 @@
                 });
             });
         });
-
-        // Add active class to navigation links on scroll
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-
-        window.addEventListener('scroll', () => {
-            let currentSection = '';
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(currentSection)) {
-                    link.classList.add('active');
-                }
-            });
-        });
     </script>
 </body>
 </html>
+
 
 
 
