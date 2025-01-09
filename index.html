@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium custom cakes and desserts by Grape Tree, SZE in Sharjah Airport Free Zone.">
+    <meta name="keywords" content="cakes, custom cakes, desserts, Sharjah">
+    <meta name="author" content="Grape Tree, SZE">
     <title>Grape Tree ZE</title>
     <style>
         /* General Styles */
@@ -15,7 +18,7 @@
             color: #333333;
         }
         header {
-            background-color: #000001;
+            background-color: #333;
             color: #ffffff;
             text-align: center;
             padding: 20px 0;
@@ -27,8 +30,11 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #1a1a1a;
+            background-color: #444;
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: #ffffff;
@@ -37,7 +43,7 @@
             font-weight: bold;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #ffd700;
         }
         .container {
             max-width: 1200px;
@@ -50,7 +56,6 @@
             background: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
         .hero {
             text-align: center;
@@ -84,8 +89,27 @@
         .product:hover {
             transform: scale(1.05);
         }
+        .testimonial {
+            background: linear-gradient(45deg, #ffd700, #ffa500);
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .team {
+            text-align: center;
+        }
+        .team img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
         footer {
-            background-color: #000000;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -94,21 +118,22 @@
             color: white;
             text-decoration: none;
         }
-        /* Panda Animation */
-        .panda {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: panda-scroll 3s infinite;
+        footer a:hover {
+            color: #ffd700;
         }
-        @keyframes panda-scroll {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(20px); }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #444;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
         }
-        .testimonial, .team {
-            background-color: #ffffff;
-            text-align: center;
+        .scroll-top:hover {
+            background: #ffd700;
         }
     </style>
 </head>
@@ -130,7 +155,6 @@
         <section id="about">
             <h2>About Us</h2>
             <p>Located in the Sharjah Airport Free Zone, Grape Tree, SZE is dedicated to crafting premium cakes with unique designs. Our products are perfect for gifting and special events.</p>
-            <img src="https://via.placeholder.com/300x300" alt="Panda Mascot" class="panda">
         </section>
         <section id="products">
             <h2>Our Products</h2>
@@ -153,7 +177,12 @@
         </section>
         <section class="team">
             <h2>Meet Our Team</h2>
-            <p>Our dedicated team works hard to bring your vision to life.</p>
+            <div>
+                <img src="https://via.placeholder.com/100" alt="Team Member">
+                <p>John Doe - Lead Chef</p>
+            </div>
+                <img src="https://via.placeholder.com/100" alt="Team Member">
+                <p>Jane Smith - Designer</p>
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
@@ -165,5 +194,22 @@
     <footer>
         <p>&copy; 2025 Grape Tree, SZE. All Rights Reserved.</p>
     </footer>
+    <div class="scroll-top" id="scrollTop">&#8679;</div>
+    <script>
+        // Scroll to Top Functionality
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
