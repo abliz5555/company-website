@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium custom cakes and desserts by Grape Tree FZE, a branch of Budounoki Ltd., in Sharjah Airport Free Zone.">
-    <meta name="keywords" content="cakes, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
-    <meta name="author" content="Budounoki Ltd.">
-    <title>Grape Tree FZE - Budounoki Ltd.</title>
+    <title>Improved Website</title>
     <style>
         /* General Styles */
         body {
@@ -15,305 +12,220 @@
             padding: 0;
             background-color: #ffffff;
             color: #333333;
-            scroll-behavior: smooth; /* Smooth scrolling for the entire page */
+            scroll-behavior: smooth;
+            font-size: 16px; /* Base font size for readability */
+            line-height: 1.6; /* Better line spacing */
         }
 
         header {
-            background-image: url('https://via.placeholder.com/1200x600'); /* Hero background image */
+            background-image: url('https://via.placeholder.com/1200x600');
             background-size: cover;
             background-position: center;
-            height: 60vh;
+            height: 70vh; /* Increased height for a more prominent hero section */
             color: #fff;
             text-align: center;
             padding: 20px;
             position: relative;
         }
+
         header h1 {
-            font-size: 3em;
+            font-size: 3.5em; /* Slightly larger hero text */
             margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
+
         header p {
-            font-size: 1.5em;
-            margin: 10px 0;
+            font-size: 1.8em; /* Larger subheader */
+            margin: 15px 0;
         }
+
         .cta-button {
-            background-color: #ffd700;
-            padding: 10px 20px;
-            border: none;
             font-size: 1.2em;
-            cursor: pointer;
+            padding: 15px 25px;
+            border-radius: 8px;
+            background-color: #ff9900;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #ffcc00;
+            border: none;
+            cursor: pointer;
         }
 
         nav {
             display: flex;
-            justify-content: center; /* Center the nav links */
+            justify-content: center;
             background-color: #444;
-            padding: 10px 20px;
+            padding: 15px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px; /* Wider spacing between links */
+            font-size: 1.1em; /* Slightly larger font size for better readability */
             font-weight: bold;
-            font-size: 1em;
             padding: 10px;
         }
+
         nav a:hover {
-            color: #ffd700;
+            color: #ff9900;
         }
 
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 20px;
-            text-align: center; /* Centering the content inside container */
+            padding: 40px 20px; /* More padding for breathing space */
         }
 
-        /* Adjust layout for products and company sections */
         .products, .company-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the content */
+            justify-content: space-between; /* Uniform spacing between items */
+            gap: 20px; /* Consistent spacing between elements */
             padding: 50px 0;
         }
+
         .product, .company-card {
-            width: 48%;
-            margin-bottom: 20px;
+            width: 45%; /* Slightly reduced width for more space between items */
+            margin-bottom: 30px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background: #f9f9f9;
             transition: transform 0.3s;
         }
+
         .product:hover, .company-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Subtle hover effect */
         }
+
         .product img, .company-card img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
-            border-bottom: 3px solid #f4f4f4;
+            border-bottom: 4px solid #ffd700; /* More prominent border */
         }
+
         .product h3, .company-card h3 {
-            font-size: 1.5em;
-            margin: 20px 0 10px;
+            font-size: 1.8em; /* Slightly larger headings */
+            margin: 15px 0;
         }
+
         .product p, .company-card p {
-            font-size: 1.2em;
-            color: #777;
-            padding: 0 10px;
-        }
-        .testimonial {
-            background: linear-gradient(45deg, #ffd700, #ffa500);
-            color: #fff;
-            text-align: center;
-            padding: 40px;
-            border-radius: 8px;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        .team {
-            text-align: center;
-        }
-        .team img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: 10px;
+            font-size: 1.2em; /* Improved paragraph font size */
+            color: #555;
         }
 
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #444;
+            color: #fff;
             text-align: center;
-            padding: 10px 0;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #ffd700;
+            padding: 20px 0;
+            font-size: 1.1em; /* Larger footer text */
         }
 
         .scroll-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #444;
-            color: white;
-            padding: 10px 15px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff9900;
+            color: #fff;
+            padding: 12px 18px;
             border-radius: 50%;
-            display: none;
+            font-size: 1.5em;
             cursor: pointer;
-        }
-        .scroll-top:hover {
-            background: #ffd700;
+            text-align: center;
         }
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-            nav {
-                justify-content: center;
+            header h1 {
+                font-size: 2.8em;
             }
+
+            header p {
+                font-size: 1.5em;
+            }
+
             nav a {
-                margin: 0 5px;
-                font-size: 0.8em;
+                font-size: 1em;
+                margin: 0 10px;
             }
 
             .product, .company-card {
-                width: 100%;
-                margin-bottom: 30px;
-                box-sizing: border-box;
+                width: 100%; /* Full-width on mobile */
             }
 
-            header h1 {
-                font-size: 2.5em;
-            }
-            header p {
-                font-size: 1.2em;
-            }
-
-            .cta-button {
-                font-size: 1.1em;
-                padding: 10px 20px;
-            }
-
-            .testimonial p {
-                font-size: 1.2em;
-            }
-
-            .team img {
-                width: 80px;
-                height: 80px;
-            }
-
-            footer {
-                font-size: 1em;
+            .products, .company-section {
+                gap: 15px;
             }
         }
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
+
             header p {
-                font-size: 1.1em;
+                font-size: 1.3em;
             }
+
             .cta-button {
+                font-size: 1em;
+            }
+
+            nav a {
                 font-size: 0.9em;
-            }
-            .testimonial p {
-                font-size: 1.1em;
-            }
-            .team img {
-                width: 70px;
-                height: 70px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Grape Tree FZE</h1>
-        <p>A Branch of Budounoki Ltd. | Custom Cakes & More | Sharjah Airport Free Zone</p>
-        <a href="#products" class="cta-button">Explore Our Desserts</a>
+        <h1>Welcome to My Website</h1>
+        <p>Your one-stop destination for unique products</p>
+        <button class="cta-button">Learn More</button>
     </header>
 
     <nav>
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
-        <a href="#company">Our Company</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
         <section id="about">
             <h2>About Us</h2>
-            <p>Grape Tree FZE is the UAE branch of Budounoki Ltd., a leading Japanese company renowned for its premium-quality cakes and desserts. With roots in Japan, Budounoki Ltd. has a legacy of excellence, blending traditional techniques with modern innovation.</p>
-            <p>Our branch in the Sharjah Airport Free Zone specializes in producing and exporting unique custom cakes, ensuring the same level of craftsmanship and quality that Budounoki Ltd. is known for globally.</p>
+            <p>We specialize in offering the best products to meet your needs. Quality and satisfaction guaranteed.</p>
         </section>
 
-        <section id="products">
-            <h2>Our Products</h2>
-            <div class="products">
-                <div class="product">
-                    <img src="https://via.placeholder.com/400x300" alt="Cut Out Cake">
-                    <h3>Cut Out Cake</h3>
-                    <p>Custom designs and precision cutting for the perfect gift.</p>
-                </div>
-                <div class="product">
-                    <img src="https://via.placeholder.com/400x300" alt="Golden Castella Cake">
-                    <h3>Golden Castella Cake</h3>
-                    <p>A luxurious twist on the classic Castella cake.</p>
-                </div>
+        <section id="products" class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/400x300" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1</p>
             </div>
-        </section>
-
-        <section id="company">
-            <h2>Our Company</h2>
-            <div class="company-section">
-                <div class="company-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Katanuki-ya Website">
-                    <h3>Katanuki-ya</h3>
-                    <p>Explore the world of traditional Japanese cakes and desserts.</p>
-                    <a href="https://www.katanuki-ya.com" target="_blank" class="cta-button">Visit Website</a>
-                </div>
-                <div class="company-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
-                    <h3>Budounoki Ltd.</h3>
-                    <p>Leading provider of premium cakes and confections worldwide.</p>
-                    <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
-                </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/400x300" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us:</p>
-            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
+            <p>Feel free to reach out to us for more information!</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
     </footer>
 
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
-
-    <script>
-        // Show Scroll Top Button when scrolled down
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
-            } else {
-                scrollTopButton.style.display = "none";
-            }
-        }
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
 </body>
 </html>
 
