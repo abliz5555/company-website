@@ -83,20 +83,20 @@
         .products, .company-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the content */
+            justify-content: space-between; /* Space between the product cards */
             padding: 50px 0;
         }
 
-        /* Reduced size of product cards */
+        /* Product card size and spacing */
         .product {
-            width: 40%; /* Reduced from 48% */
+            width: 30%; /* Reduced from 40% for better spacing */
             margin-bottom: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s;
-            padding: 10px; /* Reduced padding */
+            padding: 10px;
         }
         .product:hover {
             transform: scale(1.05);
@@ -261,6 +261,7 @@
                     <h3>Golden Castella Cake</h3>
                     <p>A luxurious twist on the classic Castella cake.</p>
                 </div>
+                <!-- Add more products here as needed -->
             </div>
         </section>
 
