@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium custom cut out cakes by Grape Tree FZE, a branch of Budounoki Ltd., in Sharjah Airport Free Zone.">
-    <meta name="keywords" content="cut out cakes, custom cakes, desserts, Sharjah, Budounoki">
+    <meta name="description" content="Explore the Cut Out Cake collection by Grape Tree FZE. Premium custom cakes in Sharjah.">
+    <meta name="keywords" content="Cut Out Cake, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
     <meta name="author" content="Budounoki Ltd.">
-    <title>Grape Tree FZE - Cut Out Cake</title>
+    <title>Cut Out Cake - Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+        /* Same Styles as Main Page */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
             color: #333333;
-            scroll-behavior: smooth; /* Smooth scrolling for the entire page */
         }
 
         header {
@@ -27,19 +26,15 @@
             color: #fff;
             text-align: center;
             padding: 20px;
-            position: relative;
         }
-
         header h1 {
             font-size: 3em;
             margin: 0;
         }
-
         header p {
             font-size: 1.5em;
             margin: 10px 0;
         }
-
         .cta-button {
             background-color: #ffd700;
             padding: 10px 20px;
@@ -49,165 +44,84 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
         }
-
-        .cta-button:hover {
-            background-color: #ffcc00;
-        }
-
         nav {
             display: flex;
-            justify-content: center; /* Center the nav links */
+            justify-content: center;
             background-color: #444;
             padding: 10px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-
         nav a {
             color: #ffffff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 1em;
-            padding: 10px;
         }
-
         nav a:hover {
             color: #ffd700;
         }
-
         nav a.active {
-            color: #ffd700; /* Active link color */
+            color: #ffd700;
         }
-
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            text-align: center; /* Centering the content inside container */
         }
-
-        .product-detail {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 50px 0;
-        }
-
-        .product-detail img {
-            max-width: 100%;
-            height: auto;
-            border: 3px solid #f4f4f4;
-            border-radius: 8px;
-        }
-
-        .product-detail h2 {
-            font-size: 2.5em;
-            margin-top: 20px;
-        }
-
-        .product-detail p {
-            font-size: 1.2em;
-            color: #777;
-            padding: 20px;
-            max-width: 800px;
-        }
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
         }
-
         footer a {
             color: white;
             text-decoration: none;
         }
-
         footer a:hover {
             color: #ffd700;
         }
 
-        .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #444;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            display: none;
-            cursor: pointer;
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0;
         }
-
-        .scroll-top:hover {
-            background: #ffd700;
+        .product {
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
         }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            nav {
-                justify-content: center;
-            }
-
-            nav a {
-                margin: 0 5px;
-                font-size: 0.8em;
-            }
-
-            .product-detail img {
-                max-width: 80%;
-            }
-
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header p {
-                font-size: 1.2em;
-            }
-
-            .cta-button {
-                font-size: 1.1em;
-                padding: 10px 20px;
-            }
-
-            footer {
-                font-size: 1em;
-            }
+        .product:hover {
+            transform: scale(1.05);
         }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            .cta-button {
-                font-size: 0.9em;
-            }
-
-            footer {
-                font-size: 0.9em;
-            }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            font-size: 1.5em;
+            margin: 20px 0 10px;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Cut Out Cake</h1>
-        <p>Custom cakes made to fit your celebrations perfectly</p>
-        <a href="#product-detail" class="cta-button">Learn More</a>
+        <h1>Grape Tree FZE</h1>
+        <p>A Branch of Budounoki Ltd. | Custom Cakes & More | Sharjah Airport Free Zone</p>
+        <a href="index.html" class="cta-button">Back to Home</a>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <a href="index.html#about">About Us</a>
         <a href="index.html#products">Products</a>
@@ -215,63 +129,34 @@
         <a href="index.html#contact">Contact</a>
     </nav>
 
+    <!-- Main Content -->
     <div class="container">
-        <section id="product-detail" class="product-detail">
-            <img src="images/cutout-cake.jpg" alt="Cut Out Cake">
-            <h2>Custom Cut Out Cakes</h2>
-            <p>Our cut-out cakes are a perfect combination of creativity and taste. Whether it’s a birthday, wedding, or any special occasion, we make sure every detail of your cake design is tailored to perfection. Each cake is hand-crafted using the finest ingredients to ensure a delicious and visually stunning dessert that will wow your guests!</p>
-            <p>With a wide range of designs and themes, our team can create the perfect cake to match your event. Get in touch with us for custom orders and more information!</p>
-        </section>
+        <h2>Cut Out Cake Collection</h2>
+        <p>Our premium collection of Cut Out Cakes is perfect for any occasion. Custom-designed and handcrafted with precision.</p>
+        <div class="products">
+            <div class="product">
+                <img src="images/cutoutcake1.jpg" alt="Cut Out Cake 1">
+                <h3>Cut Out Cake 1</h3>
+            </div>
+            <div class="product">
+                <img src="images/cutoutcake2.jpg" alt="Cut Out Cake 2">
+                <h3>Cut Out Cake 2</h3>
+            </div>
+            <div class="product">
+                <img src="images/cutoutcake3.jpg" alt="Cut Out Cake 3">
+                <h3>Cut Out Cake 3</h3>
+            </div>
+        </div>
     </div>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
+        <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a> | Phone: +971-XXX-XXXX</p>
     </footer>
-
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
-
-    <script>
-        // Show Scroll Top Button when scrolled down
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
-            } else {
-                scrollTopButton.style.display = "none";
-            }
-        }
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add active class to navigation links on scroll
-        const navLinks = document.querySelectorAll('nav a');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.href.includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
+
 
 
 
