@@ -56,15 +56,15 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            flex-wrap: wrap;
             text-align: center;
+            white-space: nowrap; /* Ensure links stay on one line */
         }
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
             font-weight: bold;
-            font-size: 0.49em; /* Reduced by 30% */
+            font-size: 1.1em; /* Smaller font size */
             padding: 10px;
         }
         nav a:hover {
@@ -160,15 +160,12 @@
         @media (max-width: 768px) {
             /* Mobile Navigation */
             nav {
-                flex-direction: column;
-                align-items: center;
-                padding: 20px;
+                flex-wrap: nowrap;
+                justify-content: space-around; /* Ensures space between links */
             }
             nav a {
-                margin: 10px 0;
-                font-size: 1.5em;
-                text-align: center;
-                width: 100%; /* Ensure the links are centered and have full width */
+                margin: 0 8px;
+                font-size: 1.2em; /* Slightly larger font for readability */
             }
 
             /* Product and Company Card Layout */
