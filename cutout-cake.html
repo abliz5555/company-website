@@ -8,14 +8,88 @@
     <meta name="author" content="Budounoki Ltd.">
     <title>Cut Out Cake - Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet if applicable -->
     <style>
-        /* Additional styling specific to the product gallery if needed */
+        /* Same Styles as Main Page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        header {
+            background-image: url('images/header-image.jpg'); /* Hero background image */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .cta-button {
+            background-color: #ffd700;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        nav a.active {
+            color: #ffd700;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #ffd700;
+        }
+
         .products {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px; /* Space between product cards */
+            gap: 20px;
             padding: 50px 0;
         }
         .product {
@@ -32,7 +106,6 @@
         .product img {
             width: 100%;
             height: auto;
-            border-bottom: 3px solid #f4f4f4;
         }
         .product h3 {
             font-size: 1.5em;
@@ -58,51 +131,22 @@
 
     <!-- Main Content -->
     <div class="container">
-        <section id="products">
-            <h2>Cut Out Cake Collection</h2>
-            <div class="products">
-                <div class="product">
-                    <img src="images/cutoutcake1.jpg" alt="Cut Out Cake 1">
-                    <h3>Cut Out Cake 1</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake2.jpg" alt="Cut Out Cake 2">
-                    <h3>Cut Out Cake 2</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake3.jpg" alt="Cut Out Cake 3">
-                    <h3>Cut Out Cake 3</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake4.jpg" alt="Cut Out Cake 4">
-                    <h3>Cut Out Cake 4</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake5.jpg" alt="Cut Out Cake 5">
-                    <h3>Cut Out Cake 5</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake6.jpg" alt="Cut Out Cake 6">
-                    <h3>Cut Out Cake 6</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake7.jpg" alt="Cut Out Cake 7">
-                    <h3>Cut Out Cake 7</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake8.jpg" alt="Cut Out Cake 8">
-                    <h3>Cut Out Cake 8</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake9.jpg" alt="Cut Out Cake 9">
-                    <h3>Cut Out Cake 9</h3>
-                </div>
-                <div class="product">
-                    <img src="images/cutoutcake10.jpg" alt="Cut Out Cake 10">
-                    <h3>Cut Out Cake 10</h3>
-                </div>
+        <h2>Cut Out Cake Collection</h2>
+        <p>Our premium collection of Cut Out Cakes is perfect for any occasion. Custom-designed and handcrafted with precision.</p>
+        <div class="products">
+            <div class="product">
+                <img src="images/cutoutcake1.jpg" alt="Cut Out Cake 1">
+                <h3>Cut Out Cake 1</h3>
             </div>
-        </section>
+            <div class="product">
+                <img src="images/cutoutcake2.jpg" alt="Cut Out Cake 2">
+                <h3>Cut Out Cake 2</h3>
+            </div>
+            <div class="product">
+                <img src="images/cutoutcake3.jpg" alt="Cut Out Cake 3">
+                <h3>Cut Out Cake 3</h3>
+            </div>
+        </div>
     </div>
 
     <!-- Footer Section -->
@@ -112,5 +156,6 @@
     </footer>
 </body>
 </html>
+
 
 
