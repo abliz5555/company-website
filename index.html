@@ -15,6 +15,12 @@
             padding: 0;
             background-color: #ffffff;
             color: #333333;
+            text-align: center; /* Centering all content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         header {
             position: relative;
@@ -22,9 +28,14 @@
             background-size: cover;
             background-position: center;
             height: 60vh;
+            width: 100%;
             text-align: center;
             color: #fff;
             padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         header h1 {
             font-size: 3em;
@@ -56,6 +67,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
         nav a {
             color: #ffffff;
@@ -72,13 +84,14 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            text-align: center;
         }
 
         /* Adjust layout for products and company sections */
         .products, .company-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
             padding: 50px 0;
         }
         .product, .company-card {
@@ -131,6 +144,7 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+            width: 100%;
         }
         footer a {
             color: white;
@@ -268,48 +282,21 @@
         </section>
 
         <section class="testimonial">
-            <h2>What Our Customers Say</h2>
-            <p>"Grape Tree's custom cakes are the best in the region. The quality, design, and flavor are unmatched!"</p>
+            <h3>What Our Clients Say</h3>
+            <p>"Grape Tree's cakes made our wedding extra special! The attention to detail was incredible."</p>
         </section>
 
-        <section class="team">
-            <h2>Meet Our Team</h2>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/100" alt="John Doe">
-                <p>John Doe - Founder</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/100" alt="Jane Smith">
-                <p>Jane Smith - Designer</p>
-            </div>
-        </section>
+        <footer>
+            <p>&copy; 2025 Grape Tree FZE. All rights reserved. | <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-conditions">Terms & Conditions</a></p>
+        </footer>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us:</p>
-            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
-        </section>
+        <div class="scroll-top" id="scroll-top">
+            ↑
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
-    </footer>
-
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
-
-    <script>
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
-            } else {
-                scrollTopButton.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
+
 
 
 
