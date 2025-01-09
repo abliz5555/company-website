@@ -50,21 +50,22 @@
         }
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             background-color: #444;
-            padding: 10px 0;
+            padding: 10px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
             text-align: center;
-            white-space: nowrap; /* Ensure links stay on one line */
+            white-space: nowrap;
+            overflow-x: auto; /* Allow horizontal scrolling if necessary */
         }
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 5px;
             font-weight: bold;
-            font-size: 1.1em; /* Smaller font size */
+            font-size: 1em; /* Reduced font size */
             padding: 10px;
         }
         nav a:hover {
@@ -158,14 +159,13 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-            /* Mobile Navigation */
             nav {
+                justify-content: space-around; /* Distribute space evenly */
                 flex-wrap: nowrap;
-                justify-content: space-around; /* Ensures space between links */
             }
             nav a {
-                margin: 0 8px;
-                font-size: 1.2em; /* Slightly larger font for readability */
+                margin: 0 5px;
+                font-size: 0.9em; /* Adjust font size for smaller screens */
             }
 
             /* Product and Company Card Layout */
