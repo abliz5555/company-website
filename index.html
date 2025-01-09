@@ -91,6 +91,7 @@
             justify-content: center; /* Center the content */
             padding: 50px 0;
         }
+
         .product, .company-card {
             width: 48%;
             margin-bottom: 20px;
@@ -100,23 +101,28 @@
             overflow: hidden;
             transition: transform 0.3s;
         }
+
         .product:hover, .company-card:hover {
             transform: scale(1.05);
         }
+
         .product img, .company-card img {
             width: 100%;
             height: auto;
             border-bottom: 3px solid #f4f4f4;
         }
+
         .product h3, .company-card h3 {
             font-size: 1.5em;
             margin: 20px 0 10px;
         }
+
         .product p, .company-card p {
             font-size: 1.2em;
             color: #777;
             padding: 0 10px;
         }
+
         .testimonial {
             background: linear-gradient(45deg, #ffd700, #ffa500);
             color: #fff;
@@ -124,12 +130,15 @@
             padding: 40px;
             border-radius: 8px;
         }
+
         .testimonial p {
             font-style: italic;
         }
+
         .team {
             text-align: center;
         }
+
         .team img {
             border-radius: 50%;
             width: 100px;
@@ -143,10 +152,12 @@
             text-align: center;
             padding: 10px 0;
         }
+
         footer a {
             color: white;
             text-decoration: none;
         }
+
         footer a:hover {
             color: #ffd700;
         }
@@ -162,6 +173,7 @@
             display: none;
             cursor: pointer;
         }
+
         .scroll-top:hover {
             background: #ffd700;
         }
@@ -177,9 +189,18 @@
             }
 
             .product, .company-card {
-                width: 100%;
-                margin-bottom: 30px;
-                box-sizing: border-box;
+                width: 45%; /* Makes the cards slightly smaller to fit more on the screen */
+                margin-right: 20px; /* Adds space between the cards */
+            }
+
+            .product:last-child {
+                margin-right: 0; /* Removes the right margin for the last product */
+            }
+
+            .products {
+                flex-direction: row;  /* Keeps cards in one row on mobile */
+                overflow-x: auto;  /* Allows scrolling horizontally */
+                padding: 20px 0;
             }
 
             header h1 {
@@ -272,76 +293,43 @@
                     <img src="https://via.placeholder.com/400x300" alt="Katanuki-ya Website">
                     <h3>Katanuki-ya</h3>
                     <p>Explore the world of traditional Japanese cakes and desserts.</p>
-                    <a href="https://www.katanuki-ya.com" target="_blank" class="cta-button">Visit Website</a>
+                    <a href="https://www.katanuki-ya.com">Visit Website</a>
                 </div>
                 <div class="company-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
+                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Ltd. Website">
                     <h3>Budounoki Ltd.</h3>
-                    <p>Leading provider of premium cakes and confections worldwide.</p>
-                    <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
+                    <p>Official website of Budounoki Ltd., the parent company of Grape Tree FZE.</p>
+                    <a href="https://www.budounoki.com">Visit Website</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us:</p>
-            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
+        <section id="testimonials">
+            <div class="testimonial">
+                <p>"The best custom cakes we've ever had! Exceptional quality and unique designs."</p>
+            </div>
         </section>
+
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <img src="https://via.placeholder.com/100" alt="Team Member 1">
+                <img src="https://via.placeholder.com/100" alt="Team Member 2">
+                <img src="https://via.placeholder.com/100" alt="Team Member 3">
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Grape Tree FZE - All Rights Reserved</p>
+            <p><a href="#contact">Contact Us</a></p>
+        </footer>
+
+        <div class="scroll-top" onclick="window.scrollTo(0, 0)">↑</div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
-    </footer>
-
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
-
-    <script>
-        // Show Scroll Top Button when scrolled down
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
-            } else {
-                scrollTopButton.style.display = "none";
-            }
-        }
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add active class to navigation links on scroll
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-
-        window.addEventListener('scroll', () => {
-            let currentSection = '';
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(currentSection)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
+
 
 
 
