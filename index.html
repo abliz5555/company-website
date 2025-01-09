@@ -10,124 +10,6 @@
     <style>
         /* General Styles */
         body {
-            font-family: 'Comic Sans MS', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333333;
-        }
-        header {
-            position: relative;
-            background-image: url('https://via.placeholder.com/1200x600'); /* Hero background image */
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .cta-button {
-            background-color: #ffd700;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #ffcc00;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium custom cakes and desserts by Grape Tree FZE, a branch of Budounoki Ltd., in Sharjah Airport Free Zone.">
-    <meta name="keywords" content="cakes, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
-    <meta name="author" content="Budounoki Ltd.">
-    <title>Grape Tree FZE - Budounoki Ltd.</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Comic Sans MS', sans-serif; /* Cute font */
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333333;
-        }
-        header {
-            position: relative;
-            background-image: url('https://via.placeholder.com/1200x600'); /* Hero background image */
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .cta-button {
-            background-color: #ffd700;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #ffcc00;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 10px 0;
-            position: sticky;<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium custom cakes and desserts by Grape Tree FZE, a branch of Budounoki Ltd., in Sharjah Airport Free Zone.">
-    <meta name="keywords" content="cakes, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
-    <meta name="author" content="Budounoki Ltd.">
-    <title>Grape Tree FZE - Budounoki Ltd.</title>
-    <style>
-        /* General Styles */
-        body {
             font-family: 'Poppins', sans-serif; /* Creative font */
             margin: 0;
             padding: 0;
@@ -385,8 +267,45 @@
             <p>"Grape Tree's custom cakes are the best in the region. The quality, design, and flavor are unmatched!"</p>
         </section>
 
-        <section class
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="John Doe">
+                <p>John Doe - Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Jane Smith">
+                <p>Jane Smith - Designer</p>
+            </div>
+        </section>
 
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or special requests? Contact us today!</p>
+            <p>Email: contact@grapetreefze.com</p>
+            <p>Phone: +971-123-4567</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Grape Tree FZE, a branch of Budounoki Ltd. All rights reserved.</p>
+        <p><a href="#about">About Us</a> | <a href="#contact">Contact</a></p>
+    </footer>
+
+    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
+
+    <script>
+        // Scroll top button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.querySelector('.scroll-top').style.display = "block";
+            } else {
+                document.querySelector('.scroll-top').style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
 
 
 
