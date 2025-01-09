@@ -25,6 +25,10 @@
             text-align: center;
             color: #fff;
             padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center the text */
+            align-items: center; /* Horizontally center the text */
         }
         header h1 {
             font-size: 3em;
@@ -58,12 +62,13 @@
             z-index: 1000;
             text-align: center;
             white-space: nowrap;
-            overflow-x: auto; /* Allow horizontal scrolling if necessary */
+            overflow-x: auto;
+            align-items: center; /* Center the nav items vertically */
         }
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 5px;
+            margin: 0 10px;
             font-weight: bold;
             font-size: 1em; /* Reduced font size */
             padding: 10px;
@@ -160,12 +165,11 @@
         /* Mobile Styles */
         @media (max-width: 768px) {
             nav {
-                justify-content: space-around; /* Distribute space evenly */
-                flex-wrap: nowrap;
+                justify-content: space-between; /* Ensure space between menu items */
             }
             nav a {
                 margin: 0 5px;
-                font-size: 0.9em; /* Adjust font size for smaller screens */
+                font-size: 0.8em; /* Reduced font size for smaller screens */
             }
 
             /* Product and Company Card Layout */
@@ -235,11 +239,6 @@
     </nav>
 
     <div class="container">
-        <section class="hero">
-            <h2>Welcome to Grape Tree</h2>
-            <p>Creative Cakes for Every Occasion</p>
-        </section>
-
         <section id="about">
             <h2>About Us</h2>
             <p>Grape Tree FZE is the UAE branch of Budounoki Ltd., a leading Japanese company renowned for its premium-quality cakes and desserts. With roots in Japan, Budounoki Ltd. has a legacy of excellence, blending traditional techniques with modern innovation.</p>
@@ -269,13 +268,13 @@
                     <img src="https://via.placeholder.com/400x300" alt="Katanuki-ya Website">
                     <h3>Katanuki-ya</h3>
                     <p>Explore the world of traditional Japanese cakes and desserts.</p>
-                    <a href="https://www.katanukiya.com" target="_blank" class="cta-button">Visit Website</a>
+                    <a href="https://www.katanuki-ya.com" target="_blank" class="cta-button">Visit Website</a>
                 </div>
                 <div class="company-card">
                     <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
                     <h3>Budounoki Ltd.</h3>
-                    <p>Discover the premium cakes and desserts by Budounoki.</p>
-                    <a href="https://www.budounoki.com" target="_blank" class="cta-button">Visit Website</a>
+                    <p>Discover the excellence of Japanese confectionery.</p>
+                    <a href="http://budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
                 </div>
             </div>
         </section>
