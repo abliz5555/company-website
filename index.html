@@ -27,8 +27,9 @@
             padding: 0 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertically center the text */
-            align-items: center; /* Horizontally center the text */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         header h1 {
             font-size: 3em;
@@ -54,7 +55,7 @@
         }
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Center the nav links */
             background-color: #444;
             padding: 10px 20px;
             position: sticky;
@@ -63,14 +64,14 @@
             text-align: center;
             white-space: nowrap;
             overflow-x: auto;
-            align-items: center; /* Center the nav items vertically */
+            align-items: center;
         }
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px; /* Adjusted to space links evenly */
             font-weight: bold;
-            font-size: 1em; /* Reduced font size */
+            font-size: 1em;
             padding: 10px;
         }
         nav a:hover {
@@ -80,13 +81,14 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            text-align: center; /* Centering the content inside container */
         }
 
         /* Adjust layout for products and company sections */
         .products, .company-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center; /* Center the content */
             padding: 50px 0;
         }
         .product, .company-card {
@@ -165,14 +167,13 @@
         /* Mobile Styles */
         @media (max-width: 768px) {
             nav {
-                justify-content: space-between; /* Ensure space between menu items */
+                justify-content: center;
             }
             nav a {
                 margin: 0 5px;
-                font-size: 0.8em; /* Reduced font size for smaller screens */
+                font-size: 0.8em;
             }
 
-            /* Product and Company Card Layout */
             .product, .company-card {
                 width: 100%;
                 margin-bottom: 30px;
@@ -323,6 +324,7 @@
     </script>
 </body>
 </html>
+
 
 
 
