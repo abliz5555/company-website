@@ -45,13 +45,18 @@
 
         .swipe-up {
             position: absolute;
-            bottom: 30px;
+            bottom: 20px;
+            font-size: 1.2em;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
             animation: bounce 2s infinite;
         }
 
-        .swipe-up img {
-            width: 50px;
-            height: 50px;
+        .swipe-up span {
+            display: block;
+            margin-top: 5px;
+            font-size: 1em;
         }
 
         @keyframes bounce {
@@ -68,16 +73,17 @@
     <div class="welcome-page">
         <h1>Welcome to Grape Tree FZE</h1>
         <p>Your Destination for Custom Cakes & Desserts</p>
-        <div class="swipe-up">
-            <img src="images/swipe-up-icon.png" alt="Swipe Up" />
+        <div class="swipe-up" onclick="navigateToWebsite()">
+            Swipe Up
+            <span>⬆️</span>
         </div>
     </div>
 
     <script>
-        // Add a swipe-up or click event to navigate to the official website
-        document.querySelector('.welcome-page').addEventListener('click', () => {
-            window.location.href = "https://www.katanuki-ya.com"; // Replace with your website URL
-        });
+        // Function to navigate to the official website
+        function navigateToWebsite() {
+            window.location.href = "https://www.katanuki-ya.com";
+        }
 
         // Detect swipe up gesture
         let touchStartY = 0;
@@ -89,13 +95,12 @@
         document.addEventListener('touchend', (event) => {
             let touchEndY = event.changedTouches[0].clientY;
             if (touchStartY - touchEndY > 50) { // Swipe up threshold
-                window.location.href = "https://www.katanuki-ya.com"; // Replace with your website URL
+                navigateToWebsite();
             }
         });
     </script>
 </body>
 </html>
-
 
 
 
