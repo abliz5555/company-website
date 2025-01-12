@@ -30,26 +30,24 @@
             width: 100%;
             height: 100%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: flex-start;
             justify-content: space-between;
-            padding: 10%;
+            padding: 20px;
             box-sizing: border-box;
-            position: relative;
         }
 
         .info-section {
-            width: 100%;
-            max-width: 600px;  /* To limit width */
+            width: 50%;
+            padding: 30px;
             color: #fff;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
         }
 
         .info-section h1 {
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin: 0 0 20px;
         }
 
         .info-section p {
@@ -68,9 +66,10 @@
             border-radius: 8px;
             cursor: pointer;
             text-transform: uppercase;
+            text-decoration: none;
             position: absolute;
-            top: 10%; 
-            right: 5%; 
+            top: 20%; /* Moved 10% up */
+            right: 15%; /* Moved 5% right */
             transform: translateY(-50%);
         }
 
@@ -79,17 +78,15 @@
         }
 
         .message-form {
-            width: 90%;
-            max-width: 500px; /* To limit width */
+            width: 36%; /* Reduced by 20% */
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: absolute;
-            bottom: 10%; 
-            left: 10%;
-            height: auto;
-            z-index: 2; /* Ensure it stays on top */
+            bottom: 20px; /* Adjusted to the bottom-left corner */
+            left: 20px;
+            height: auto; /* Adjusted height */
         }
 
         .message-form h2 {
@@ -116,7 +113,7 @@
 
         .message-form textarea {
             resize: none;
-            height: 80px;
+            height: 80px; /* Reduced height */
         }
 
         .message-form button {
@@ -137,48 +134,26 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .main-container {
-                padding: 5%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
             }
 
-            .info-section {
-                width: 100%;
-                text-align: center;
-                padding: 15px;
+            .info-section,
+            .message-form {
+                width: 90%;
                 margin-bottom: 20px;
             }
 
-            .action-button {
-                top: 15%; 
-                right: 10%;
-            }
-
-            .message-form {
-                width: 90%;
-                left: 5%;
-                bottom: 10%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .info-section h1 {
-                font-size: 1.8em;
-            }
-
-            .info-section p {
-                font-size: 1em;
-            }
-
-            .message-form {
-                width: 100%;
-                left: 0;
-                bottom: 0;
-                margin-bottom: 10px;
-                height: auto;
+            .info-section {
+                text-align: center;
+                padding: 20px;
             }
 
             .action-button {
-                top: 10%;
-                right: 5%;
+                top: 10px;
+                right: 10px;
+                transform: none;
             }
         }
     </style>
@@ -212,6 +187,7 @@
     </div>
 </body>
 </html>
+
 
 
 
