@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Grape Tree FZE - Explore more about our premium cakes and desserts.">
-    <meta name="keywords" content="custom cakes, desserts, Grape Tree, Budounoki">
-    <meta name="author" content="Budounoki Ltd.">
-    <title>Welcome - Grape Tree FZE</title>
+    <meta name="description" content="Welcome to Grape Tree FZE - Learn more about us and leave us a message.">
+    <title>Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
@@ -16,155 +14,159 @@
             width: 100%;
             height: 100%;
             font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            background-color: #f9f9f9;
-        }
-
-        .main-container {
-            background-image: url('images/header-image.jpg.jpg');
+            background-image: url('images/header-image.jpg.jpg'); /* Replace with your background image */
             background-size: cover;
             background-position: center;
-            width: 100%;
-            height: 100%;
+            color: #fff;
+        }
+
+        .container {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
+            flex-direction: column;
             justify-content: space-between;
+            align-items: center;
+            height: 100%;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        .info-section {
-            width: 50%;
-            padding: 30px;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-        }
-
-        .info-section h1 {
-            font-size: 2.5em;
-            margin: 0 0 20px;
-        }
-
-        .info-section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        .action-button {
+        .cta-button {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
             background-color: #ffd700;
             color: #000;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-transform: uppercase;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 2;
         }
 
-        .action-button:hover {
+        .cta-button:hover {
             background-color: #ffcc00;
         }
 
-        .message-form {
-            width: 45%;
-            background: rgba(255, 255, 255, 0.9);
+        .info-section {
+            width: 80%;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .message-form h2 {
-            margin-top: 0;
-            color: #444;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
         }
 
-        .message-form form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .info-section h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
-        .message-form input,
-        .message-form textarea {
-            width: 100%;
-            padding: 10px;
+        .info-section p {
             font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .contact-form {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 280px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
             box-sizing: border-box;
         }
 
-        .message-form textarea {
-            resize: none;
-            height: 100px;
+        .contact-form h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
 
-        .message-form button {
-            padding: 10px 20px;
-            font-size: 1em;
-            color: #fff;
-            background: #444;
+        .contact-form label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
+            border-radius: 4px;
         }
 
-        .message-form button:hover {
-            background: #ffd700;
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffcc00;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-            }
-
-            .info-section,
-            .message-form {
-                width: 90%;
-                margin-bottom: 20px;
-            }
-
             .info-section {
-                text-align: center;
-                padding: 20px;
+                width: 90%;
+                bottom: 10%;
+            }
+
+            .contact-form {
+                width: 250px;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 8px 16px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
+    <div class="container">
+        <!-- Visit Our Website Button -->
+        <a href="https://www.katanuki-ya.com" class="cta-button">Visit Our Website</a>
+
         <!-- Information Section -->
         <div class="info-section">
             <h1>Welcome to Grape Tree FZE</h1>
-            <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
-            <p><strong>About Us:</strong> We are a branch of <strong>Budounoki Co., Ltd.</strong>, based in Japan. Specializing in custom-made wholesale cakes, including layer cut-out cakes and golden castella cakes.</p>
-            <p><strong>Contact Us:</strong></p>
-            <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
-            <a href="https://www.katanuki-ya.com" class="action-button" target="_blank">Visit Our Website</a>
+            <p>Our company is located in the Sharjah Airport Free Zone (SAIF Zone), T5-69.</p>
+            <p>We are a branch of BUDOUNOKI CO., Ltd., Japan, serving the Middle East and UAE.</p>
+            <p>
+                We provide wholesale custom-made layer cut-out cakes and golden castella cakes.
+                To learn more, please contact us or visit our official website by clicking the button above.
+            </p>
         </div>
 
-        <!-- Message Form -->
-        <div class="message-form">
+        <!-- Leave Us a Message Form -->
+        <div class="contact-form">
             <h2>Leave Us a Message</h2>
-            <form action="send-message.php" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="phone" placeholder="Your Phone Number" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+            <form action="send_message.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
                 <button type="submit">Send Message</button>
             </form>
         </div>
