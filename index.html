@@ -9,14 +9,13 @@
     <title>Welcome - Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             font-family: 'Poppins', sans-serif;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
         }
 
         .welcome-page {
@@ -28,7 +27,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: flex-start; /* Align content to the left */
+            justify-content: flex-start;
             padding: 0 40px;
             color: #fff;
         }
@@ -49,13 +48,42 @@
             line-height: 1.5em;
         }
 
-        .info-section .contact-details {
+        .info-section a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-details {
             margin-top: 20px;
         }
 
-        .info-section .contact-details p {
+        .contact-details p {
             margin: 5px 0;
             font-size: 1em;
+        }
+
+        .form-container {
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-container input, .form-container textarea, .form-container button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #FFD700;
+            color: #000;
+            cursor: pointer;
+            font-weight: bold;
         }
 
         .swipe-up {
@@ -68,12 +96,6 @@
             animation: bounce 2s infinite;
             left: 50%;
             transform: translateX(-50%);
-        }
-
-        .swipe-up span {
-            display: block;
-            margin-top: 5px;
-            font-size: 1em;
         }
 
         @keyframes bounce {
@@ -90,11 +112,31 @@
     <div class="welcome-page">
         <div class="info-section">
             <h1>Welcome to Grape Tree FZE</h1>
-            <p>Your Destination for Custom Cakes & Desserts</p>
+            <p>
+                We are located in <strong>Sharjah Airport Free Zone (SAIF Zone), T5-69</strong>.
+                Our parent company, <strong>Budounoki Co. Ltd.</strong>, is based in Japan.
+            </p>
+            <p>
+                As the Middle East branch, we specialize in wholesale custom-made 
+                layer cut-out cakes and golden Castella cakes.
+            </p>
+            <p>
+                To know more, please <strong>contact us</strong> or visit our 
+                official website by swiping up the screen.
+            </p>
             <div class="contact-details">
-                <p><strong>Address:</strong> Dubai, UAE</p>
-                <p><strong>Email:</strong> info@grapetreefze.com</p>
+                <p><strong>Email:</strong> <a href="mailto:info@grapetreefze.com">info@grapetreefze.com</a></p>
                 <p><strong>Phone:</strong> +971 50 123 4567</p>
+            </div>
+            <div class="form-container">
+                <h2>Leave Us a Message</h2>
+                <form action="send-message.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </div>
         <div class="swipe-up" onclick="navigateToWebsite()">
@@ -104,7 +146,7 @@
     </div>
 
     <script>
-        // Function to navigate to the official website
+        // Navigate to the official website
         function navigateToWebsite() {
             window.location.href = "https://www.katanuki-ya.com";
         }
@@ -125,6 +167,7 @@
     </script>
 </body>
 </html>
+
 
 
 
