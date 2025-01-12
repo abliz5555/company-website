@@ -3,350 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium custom cakes and desserts by Grape Tree FZE, a branch of Budounoki Ltd., in Sharjah Airport Free Zone.">
-    <meta name="keywords" content="cakes, custom cakes, Japanese cakes, desserts, Sharjah, Budounoki">
+    <meta name="description" content="Welcome to Grape Tree FZE - Swipe up to explore our official website.">
+    <meta name="keywords" content="custom cakes, desserts, Grape Tree, Budounoki">
     <meta name="author" content="Budounoki Ltd.">
-    <title>Grape Tree FZE - Budounoki Co. Ltd.</title>
+    <title>Welcome - Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #333333;
-            scroll-behavior: smooth; /* Smooth scrolling for the entire page */
+            width: 100%;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden; /* Prevent scrolling */
         }
 
-        header {
-            background-image: url('images/header-image.jpg.jpg'); /* Hero background image */
+        .welcome-page {
+            background-image: url('images/header-image.jpg.jpg'); /* Replace with your image */
             background-size: cover;
             background-position: center;
-            height: 60vh;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            position: relative;
         }
-        header h1 {
+
+        .welcome-page h1 {
             font-size: 3em;
             margin: 0;
         }
-        header p {
+
+        .welcome-page p {
             font-size: 1.5em;
             margin: 10px 0;
         }
-        .cta-button {
-            background-color: #ffd700;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #ffcc00;
+
+        .swipe-up {
+            position: absolute;
+            bottom: 30px;
+            animation: bounce 2s infinite;
         }
 
-        nav {
-            display: flex;
-            justify-content: center; /* Center the nav links */
-            background-color: #444;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1em;
-            padding: 10px;
-        }
-        nav a:hover {
-            color: #ffd700;
+        .swipe-up img {
+            width: 50px;
+            height: 50px;
         }
 
-        nav a.active {
-            color: #ffd700; /* Active link color */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            text-align: center; /* Centering the content inside container */
-        }
-
-        /* Adjust layout for products and company sections */
-        .products, .company-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Center the content */
-            padding: 50px 0;
-        }
-        .product, .company-card {
-            width: 35%;
-           margin: 15px; /* Added margin for spacing */
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .product:hover, .company-card:hover {
-            transform: scale(1.05);
-        }
-        .product img, .company-card img {
-            width: 100%;
-            height: auto;
-            border-bottom: 3px solid #f4f4f4;
-        }
-        .product h3, .company-card h3 {
-            font-size: 1.5em;
-            margin: 20px 0 10px;
-        }
-        .product p, .company-card p {
-            font-size: 1.2em;
-            color: #777;
-            padding: 0 10px;
-        }
-        .testimonial {
-            background: linear-gradient(45deg, #ffd700, #ffa500);
-            color: #fff;
-            text-align: center;
-            padding: 40px;
-            border-radius: 8px;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        .team {
-            text-align: center;
-        }
-        .team img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #ffd700;
-        }
-
-        .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #444;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            display: none;
-            cursor: pointer;
-        }
-        .scroll-top:hover {
-            background: #ffd700;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            nav {
-                justify-content: center;
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
             }
-            nav a {
-                margin: 0 5px;
-                font-size: 0.8em;
-            }
-
-            .product, .company-card {
-                width: 80%;
-                margin-bottom: 30px;
-                box-sizing: border-box;
-            }
-
-            header h1 {
-                font-size: 2.5em;
-            }
-            header p {
-                font-size: 1.2em;
-            }
-
-            .cta-button {
-                font-size: 1.1em;
-                padding: 10px 20px;
-            }
-
-            .testimonial p {
-                font-size: 1.2em;
-            }
-
-            .team img {
-                width: 80px;
-                height: 80px;
-            }
-
-            footer {
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1.1em;
-            }
-            .cta-button {
-                font-size: 0.9em;
-            }
-            .testimonial p {
-                font-size: 1.1em;
-            }
-            .team img {
-                width: 70px;
-                height: 70px;
+            50% {
+                transform: translateY(-10px);
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Grape Tree FZE</h1>
-        <p>A Branch of Budounoki Co. Ltd. | Custom Cakes & More | Sharjah Airport Free Zone</p>
-        <a href="#products" class="cta-button">Explore Our Desserts</a>
-    </header>
-
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#products">Products</a>
-        <a href="#company">Our Company</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Grape Tree FZE is the UAE branch of Budounoki Ltd., a leading Japanese company renowned for its premium-quality cakes and desserts. With roots in Japan, Budounoki Ltd. has a legacy of excellence, blending traditional techniques with modern innovation.</p>
-            <p>Our branch in the Sharjah Airport Free Zone specializes in producing and exporting unique custom cakes, ensuring the same level of craftsmanship and quality that Budounoki Ltd. is known for globally.</p>
-        </section>
-
-        <section id="products">
-    <h2>Our Products</h2>
-    <div class="products">
-        <div class="product">
-            <a href="cutout-cake.html">
-                <img src="images/cutoutcake.jpg" alt="Cut Out Cake">
-                <h3>Cut Out Cake</h3>
-                <p>Custom designs and precision cutting for the perfect gift.</p>
-            </a>
-        </div>
-        <div class="product">
-            <a href="castella-cake.html">
-                <img src="images/DSC_5528.JPG" alt="Golden Castella Cake">
-                <h3>Golden Castella Cake</h3>
-                <p>A luxurious twist on the classic Castella cake.</p>
-            </a>
+    <div class="welcome-page">
+        <h1>Welcome to Grape Tree FZE</h1>
+        <p>Your Destination for Custom Cakes & Desserts</p>
+        <div class="swipe-up">
+            <img src="images/swipe-up-icon.png" alt="Swipe Up" />
         </div>
     </div>
-</section>
-
-
-        <section id="company">
-            <h2>Our Company</h2>
-            <div class="company-section">
-                <div class="company-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Katanuki-ya Website">
-                    <h3>Katanuki-ya</h3>
-                    <p>Explore the world of traditional Japanese cakes and desserts.</p>
-                    <a href="https://www.katanuki-ya.com" target="_blank" class="cta-button">Visit Website</a>
-                </div>
-                <div class="company-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Budounoki Website">
-                    <h3>Budounoki Ltd.</h3>
-                    <p>Leading provider of premium cakes and confections worldwide.</p>
-                    <a href="https://www.budounoki.co.jp" target="_blank" class="cta-button">Visit Website</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us:</p>
-            <p>Email: <a href="mailto:info@grapetree.ae">info@grapetree.ae</a></p>
-            <p>Phone: +971-XXX-XXXX</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Grape Tree FZE | All Rights Reserved</p>
-    </footer>
-
-    <div class="scroll-top" onclick="window.scrollTo(0, 0);">↑</div>
 
     <script>
-        // Show Scroll Top Button when scrolled down
-        window.onscroll = function() {
-            var scrollTopButton = document.querySelector(".scroll-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollTopButton.style.display = "block";
-            } else {
-                scrollTopButton.style.display = "none";
-            }
-        }
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Add a swipe-up or click event to navigate to the official website
+        document.querySelector('.welcome-page').addEventListener('click', () => {
+            window.location.href = "https://www.yourofficialwebsite.com"; // Replace with your website URL
         });
 
-        // Add active class to navigation links on scroll
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
+        // Detect swipe up gesture
+        let touchStartY = 0;
 
-        window.addEventListener('scroll', () => {
-            let currentSection = '';
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
+        document.addEventListener('touchstart', (event) => {
+            touchStartY = event.touches[0].clientY;
+        });
 
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(currentSection)) {
-                    link.classList.add('active');
-                }
-            });
+        document.addEventListener('touchend', (event) => {
+            let touchEndY = event.changedTouches[0].clientY;
+            if (touchStartY - touchEndY > 50) { // Swipe up threshold
+                window.location.href = "https://www.yourofficialwebsite.com"; // Replace with your website URL
+            }
         });
     </script>
 </body>
 </html>
+
 
 
 
