@@ -19,6 +19,7 @@
             background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
+            overflow: hidden; /* Prevent scrolling that might cause the line */
         }
 
         /* Container for the background animation */
@@ -37,7 +38,7 @@
 
         @keyframes backgroundFade {
             0% {
-                background-image: url('images/header-image.jpg.jpg');
+                background-image: url('images/header-image.jpg');
                 transform: scale(1);
             }
             33% {
@@ -64,6 +65,7 @@
             height: 100vh;
             padding: 20px;
             box-sizing: border-box;
+            position: relative; /* Ensure the main content stays on top of the background */
         }
 
         /* Information Section */
@@ -235,6 +237,7 @@
     </div>
 </body>
 </html>
+
 
 
 
