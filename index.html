@@ -9,6 +9,7 @@
     <title>Welcome - Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body, html {
             margin: 0;
             padding: 0;
@@ -24,37 +25,38 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center content vertically */
+            justify-content: flex-start; /* Align items at the top */
             width: 100%;
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
             padding: 20px;
             box-sizing: border-box;
-            background-image: url('images/header-image.jpg.jpg'); /* Add your image path here */
+            background-image: url('images/header-image.jpg'); /* Ensure the image path is correct */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
+        /* Information Section */
         .info-section {
-            width: 90%; /* Responsive width */
-            max-width: 800px; /* Limit maximum width for large screens */
+            width: 90%;
+            max-width: 800px;
             background: rgba(255, 255, 255, 0.9);
-            margin: auto; /* Center horizontally */
+            margin: 20px 0; /* Adjust margin to avoid overflow */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
             box-sizing: border-box;
-            height: auto; /* Auto height for content */
-            display: flex; /* Flexbox for alignment */
-            flex-direction: column; /* Stack items vertically */
-            justify-content: center; /* Center vertically */
-            align-items: center; /* Center horizontally */
-            text-align: center; /* Center text inside the container */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: auto; /* Adjust height */
+            margin-top: 50px;
         }
 
         .info-section h1 {
             font-size: 1.5em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .info-section p {
@@ -63,42 +65,50 @@
             margin: 10px 0;
         }
 
-        .action-button {
-            width: auto;
+        .info-section .visit-btn {
+            margin-top: 20px;
             padding: 15px 30px;
-            font-size: 1em;
-            font-weight: bold;
             background-color: #ffd700;
             color: #000;
+            font-size: 1.2em;
+            font-weight: bold;
             border: none;
             border-radius: 8px;
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
+            width: 100%;
+            max-width: 300px; /* Limit the width of the button */
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
         }
 
-        .action-button:hover {
+        .info-section .visit-btn:hover {
             background-color: #ffcc00;
         }
 
+        /* Message Form */
         .message-form {
             width: 90%; /* Responsive width */
             max-width: 800px;
             background: rgba(255, 255, 255, 0.9);
-            margin-bottom: 20px;
+            margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
         .message-form h2 {
             margin-top: 0;
             color: #444;
-            font-size: 1.2em;
             text-align: center;
+            font-size: 1.2em;
         }
 
         .message-form form {
@@ -137,17 +147,28 @@
             background: #ffd700;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .main-container {
                 padding: 10px;
             }
 
             .info-section, .message-form {
-                width: 100%; /* Use full width on smaller screens */
+                width: 100%;
+                margin-bottom: 20px;
             }
 
-            .action-button {
-                width: 100%;
+            .info-section h1 {
+                font-size: 1.2em;
+            }
+
+            .message-form h2 {
+                font-size: 1.1em;
+            }
+
+            .info-section .visit-btn {
+                width: 100%; /* Make the button span full width on mobile */
+                margin-top: 20px;
             }
         }
     </style>
@@ -162,10 +183,9 @@
             <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
             <p>Phone: +971 54-530-8886</p>
             <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
+            <!-- Button centered within the info section -->
+            <a href="https://www.katanuki-ya.com" class="visit-btn" target="_blank">Visit Our Website</a>
         </div>
-
-        <!-- Visit Our Website Button -->
-        <a href="https://www.katanuki-ya.com" class="action-button" target="_blank">Visit Our Website</a>
 
         <!-- Message Form -->
         <div class="message-form">
@@ -181,6 +201,7 @@
     </div>
 </body>
 </html>
+
 
 
 
