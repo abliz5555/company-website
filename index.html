@@ -16,83 +16,66 @@
             width: 100%;
             height: 100%;
             font-family: 'Quicksand', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            background-color: #f9f9f9;
-        }
-
-        .main-container {
-            background-image: url('images/header-image.jpg.jpg');
-            background-size: cover;
-            background-position: center;
             width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        .info-section {
-            width: 60%; /* Increased by 10% */
-            padding: 20px;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.6);
+        .info-section, .message-form {
+            width: 90%; /* Responsive width */
+            max-width: 800px; /* Limit maximum width for large screens */
+            background: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
             border-radius: 10px;
-            height: 45%; /* Reduced height by 40% */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .info-section h1 {
             font-size: 1.5em;
-            margin: 0 0 20px;
+            margin-bottom: 10px;
         }
 
         .info-section p {
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 1.6;
-            margin: 10px 0;
         }
 
         .action-button {
+            width: auto;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
             background-color: #ffd700;
             color: #000;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
             border: none;
             border-radius: 8px;
-            cursor: pointer;
             text-transform: uppercase;
             text-decoration: none;
-            position: absolute;
-            top: 20%;
-            right: 15%;
-            transform: translateY(-50%);
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .action-button:hover {
             background-color: #ffcc00;
         }
 
-        .message-form {
-            width: 20%;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            height: auto;
-        }
-
         .message-form h2 {
             margin-top: 0;
             color: #444;
+            font-size: 1.2em;
             text-align: center;
         }
 
@@ -135,26 +118,15 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .main-container {
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
+                padding: 10px;
             }
 
-            .info-section,
-            .message-form {
-                width: 90%;
-                margin-bottom: 20px;
-            }
-
-            .info-section {
-                text-align: center;
-                padding: 20px;
+            .info-section, .message-form {
+                width: 100%; /* Use full width on smaller screens */
             }
 
             .action-button {
-                top: 10px;
-                right: 10px;
-                transform: none;
+                width: 100%;
             }
         }
     </style>
@@ -163,13 +135,16 @@
     <div class="main-container">
         <!-- Information Section -->
         <div class="info-section">
-    <p><strong>About Us:</strong> Grape Tree FZE, a branch of <strong>Budounoki Co., Ltd.</strong> based in Japan, is renowned for its custom-made cakes and desserts. We specialize in crafting wholesale custom layer cakes, including intricately designed cut-out cakes and the famous golden castella cakes. With our expert craftsmanship and dedication to quality, we cater to both individual and corporate events, ensuring that every sweet creation is a true masterpiece.</p>
-    <p><strong>Contact Us:</strong></p>
-    <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
-    <p>Phone: +971 54-530-8886</p>
-    <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
-</div>
+            <h1>About Us</h1>
+            <p><strong>Grape Tree FZE</strong>, a branch of <strong>Budounoki Co., Ltd.</strong> based in Japan, is renowned for its custom-made cakes and desserts. We specialize in crafting wholesale custom layer cakes, including intricately designed cut-out cakes and the famous golden castella cakes. With our expert craftsmanship and dedication to quality, we cater to both individual and corporate events, ensuring that every sweet creation is a true masterpiece.</p>
+            <p><strong>Contact Us:</strong></p>
+            <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
+            <p>Phone: +971 54-530-8886</p>
+            <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
+        </div>
 
+        <!-- Visit Our Website Button -->
+        <a href="https://www.katanuki-ya.com" class="action-button" target="_blank">Visit Our Website</a>
 
         <!-- Message Form -->
         <div class="message-form">
@@ -182,12 +157,10 @@
                 <button type="submit">Send Message</button>
             </form>
         </div>
-
-        <!-- Visit Our Website Button -->
-        <a href="https://www.katanuki-ya.com" class="action-button" target="_blank">Visit Our Website</a>
     </div>
 </body>
 </html>
+
 
 
 
