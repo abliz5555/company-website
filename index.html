@@ -19,53 +19,50 @@
             background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Prevent scrolling that might cause the line */
+            overflow: hidden; /* Prevent any scrolling */
         }
 
-        /* Container for the background animation */
+        /* Full screen background container */
         .background-container {
-            position: absolute;
+            position: fixed;  /* Make it fixed to the screen */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
+            background-size: cover; /* Make sure the background covers the full screen */
             background-position: center;
-            background-attachment: fixed;
-            animation: backgroundFade 9s infinite; /* Change the background every 9 seconds */
-            z-index: -1; /* Place the background behind other content */
+            background-attachment: fixed; /* Fix the background while content scrolls */
+            animation: backgroundFade 9s infinite; /* Background animation */
+            z-index: -1; /* Ensure it's behind all content */
         }
 
+        /* Keyframe animation for background images */
         @keyframes backgroundFade {
             0% {
                 background-image: url('images/header-image.jpg');
-                transform: scale(1);
             }
             33% {
                 background-image: url('images/cutoutcake.jpg');
-                transform: scale(1.05);
             }
             66% {
                 background-image: url('images/custella.JPG');
-                transform: scale(1.1);
             }
             100% {
                 background-image: url('images/DSC_5528.JPG');
-                transform: scale(1);
             }
         }
 
-        /* Main Content */
+        /* Main container for content */
         .main-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align items at the top */
+            justify-content: flex-start;
             width: 100%;
-            height: 100vh;
+            min-height: 100vh; /* Ensure content stretches full height */
             padding: 20px;
             box-sizing: border-box;
-            position: relative; /* Ensure the main content stays on top of the background */
+            position: relative;
         }
 
         /* Information Section */
@@ -82,7 +79,6 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            height: auto;
             margin-top: 50px;
         }
 
@@ -110,7 +106,7 @@
             text-decoration: none;
             text-align: center;
             width: 100%;
-            max-width: 300px; /* Limit the width of the button */
+            max-width: 300px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: block;
@@ -199,17 +195,18 @@
             }
 
             .info-section .visit-btn {
-                width: 100%; /* Make the button span full width on mobile */
+                width: 100%;
                 margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Background Container -->
     <div class="background-container"></div>
 
-    <!-- Main Content Container -->
+    <!-- Main Content -->
     <div class="main-container">
         <!-- Information Section -->
         <div class="info-section">
@@ -219,7 +216,6 @@
             <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
             <p>Phone: +971 54-530-8886</p>
             <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
-            <!-- Button centered within the info section -->
             <a href="https://www.katanuki-ya.com" class="visit-btn" target="_blank">Official Website</a>
         </div>
 
