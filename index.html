@@ -19,36 +19,35 @@
             background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Prevent any scrolling */
         }
 
         /* Full screen background container */
         .background-container {
-            position: fixed;  /* Make it fixed to the screen */
+            position: absolute;  /* Use absolute positioning instead of fixed */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover; /* Make sure the background covers the full screen */
+            background-size: cover; /* Ensure background covers entire screen */
             background-position: center;
             background-attachment: fixed; /* Fix the background while content scrolls */
             animation: backgroundFade 9s infinite; /* Background animation */
-            z-index: -1; /* Ensure it's behind all content */
+            z-index: -1; /* Ensure background is behind content */
         }
 
         /* Keyframe animation for background images */
         @keyframes backgroundFade {
             0% {
-                background-image: url('images/header-image.jpg.jpg');
+                background-image: url('https://via.placeholder.com/1500x900/ff7f7f/333333?text=Background+1');
             }
             33% {
-                background-image: url('images/cutoutcake.jpg');
+                background-image: url('https://via.placeholder.com/1500x900/ffcc00/333333?text=Background+2');
             }
             66% {
-                background-image: url('images/custella.JPG');
+                background-image: url('https://via.placeholder.com/1500x900/7f7fff/333333?text=Background+3');
             }
             100% {
-                background-image: url('images/DSC_5528.JPG');
+                background-image: url('https://via.placeholder.com/1500x900/00ff7f/333333?text=Background+4');
             }
         }
 
@@ -63,6 +62,7 @@
             padding: 20px;
             box-sizing: border-box;
             position: relative;
+            z-index: 1; /* Make sure content stays on top */
         }
 
         /* Information Section */
@@ -231,6 +231,7 @@
             </form>
         </div>
     </div>
+
 </body>
 </html>
 
