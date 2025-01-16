@@ -9,7 +9,6 @@
     <title>Welcome - Grape Tree FZE</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
         body, html {
             margin: 0;
             padding: 0;
@@ -29,13 +28,13 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
-            background-image: url('images/header-image.jpg.jpg'); /* Add your image path here */
+            background-image: url('images/header-image.jpg'); /* Add your image path here */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        .info-section, .message-form {
+        .info-section {
             width: 90%; /* Responsive width */
             max-width: 800px; /* Limit maximum width for large screens */
             background: rgba(255, 255, 255, 0.9);
@@ -44,6 +43,10 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
             box-sizing: border-box;
+            height: auto; /* Adjust height automatically */
+            display: flex; /* Flexbox to center content */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center vertically */
         }
 
         .info-section h1 {
@@ -74,6 +77,17 @@
 
         .action-button:hover {
             background-color: #ffcc00;
+        }
+
+        .message-form {
+            width: 90%; /* Responsive width */
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .message-form h2 {
@@ -119,7 +133,6 @@
             background: #ffd700;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .main-container {
                 padding: 10px;
@@ -164,6 +177,7 @@
     </div>
 </body>
 </html>
+
 
 
 
