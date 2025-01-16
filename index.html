@@ -33,21 +33,56 @@
             background-attachment: fixed; /* Fix the background while content scrolls */
             animation: backgroundFade 9s infinite; /* Background animation */
             z-index: -1; /* Ensure background is behind content */
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Grape Tree FZE - Explore more about our premium cakes and desserts.">
+    <meta name="keywords" content="custom cakes, desserts, Grape Tree, Budounoki">
+    <meta name="author" content="Budounoki Ltd.">
+    <title>Welcome - Grape Tree FZE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Full screen background container */
+        .background-container {
+            position: absolute;  /* Use absolute positioning instead of fixed */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover; /* Ensure background covers entire screen */
+            background-position: center;
+            background-attachment: fixed; /* Fix the background while content scrolls */
+            animation: backgroundFade 9s infinite; /* Background animation */
+            z-index: -1; /* Ensure background is behind content */
         }
 
         /* Keyframe animation for background images */
         @keyframes backgroundFade {
             0% {
-                background-image: url('https://github.com/abliz5555/company-website/blob/eb55428ab079b40600f555e840c834f6dc9cb174/images/header-image.jpg.jpg');
+                background-image: url('images/header-image.jpg.jpg');
             }
             33% {
-                background-image: url('https://github.com/abliz5555/company-website/blob/main/images/DSC_5528.JPG?raw=true');
+                background-image: url('images/DSC_5528.JPG');
             }
             66% {
-                background-image: url('https://github.com/abliz5555/company-website/blob/main/images/custella.JPG?raw=true');
+                background-image: url('images/custella.JPG');
             }
             100% {
-                background-image: url('https://github.com/abliz5555/company-website/blob/main/images/cutoutcake.jpg?raw=true');
+                background-image: url('images/cutoutcake.jpg');
             }
         }
 
@@ -234,6 +269,7 @@
 
 </body>
 </html>
+
 
 
 
