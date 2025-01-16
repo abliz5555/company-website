@@ -35,17 +35,15 @@
             justify-content: space-between;
             padding: 20px;
             box-sizing: border-box;
-            flex-wrap: wrap; /* Ensures content wraps on smaller screens */
         }
 
         .info-section {
-            width: 60%;
+            width: 60%; /* Increased by 10% */
             padding: 20px;
             color: #fff;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
-            height: auto; /* Adjust height dynamically */
-            margin-bottom: 20px;
+            height: 45%; /* Reduced height by 40% */
         }
 
         .info-section h1 {
@@ -70,7 +68,10 @@
             cursor: pointer;
             text-transform: uppercase;
             text-decoration: none;
-            margin-top: 20px;
+            position: absolute;
+            top: 20%;
+            right: 15%;
+            transform: translateY(-50%);
         }
 
         .action-button:hover {
@@ -80,20 +81,19 @@
         .message-form {
             width: 20%;
             background: rgba(255, 255, 255, 0.9);
-            padding: 8px; /* Reduced padding */
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            height: auto; /* Adjust height dynamically */
-            max-height: 90%; /* Ensures height is reduced by 10% */
-            overflow: auto; /* Adds scroll if content exceeds */
-            margin-bottom: 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            height: auto;
         }
 
         .message-form h2 {
             margin-top: 0;
             color: #444;
             text-align: center;
-            font-size: 1.2em;
         }
 
         .message-form form {
@@ -105,8 +105,8 @@
         .message-form input,
         .message-form textarea {
             width: 100%;
-            padding: 8px;
-            font-size: 0.9em;
+            padding: 10px;
+            font-size: 1em;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -140,20 +140,21 @@
                 justify-content: flex-start;
             }
 
-            .info-section {
-                width: 90%;
-                text-align: center;
-            }
-
+            .info-section,
             .message-form {
                 width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .info-section {
+                text-align: center;
+                padding: 20px;
             }
 
             .action-button {
-                width: 90%;
-                text-align: center;
-                padding: 10px 20px;
-                font-size: 1em;
+                top: 10px;
+                right: 10px;
+                transform: none;
             }
         }
     </style>
@@ -162,12 +163,13 @@
     <div class="main-container">
         <!-- Information Section -->
         <div class="info-section">
-            <p><strong>About Us:</strong> Grape Tree FZE, a branch of <strong>Budounoki Co., Ltd.</strong> based in Japan, is renowned for its custom-made cakes and desserts. We specialize in crafting wholesale custom layer cakes, including intricately designed cut-out cakes and the famous golden castella cakes. With our expert craftsmanship and dedication to quality, we cater to both individual and corporate events, ensuring that every sweet creation is a true masterpiece.</p>
-            <p><strong>Contact Us:</strong></p>
-            <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
-            <p>Phone: +971 54-530-8886</p>
-            <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
-        </div>
+    <p><strong>About Us:</strong> Grape Tree FZE, a branch of <strong>Budounoki Co., Ltd.</strong> based in Japan, is renowned for its custom-made cakes and desserts. We specialize in crafting wholesale custom layer cakes, including intricately designed cut-out cakes and the famous golden castella cakes. With our expert craftsmanship and dedication to quality, we cater to both individual and corporate events, ensuring that every sweet creation is a true masterpiece.</p>
+    <p><strong>Contact Us:</strong></p>
+    <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
+    <p>Phone: +971 54-530-8886</p>
+    <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
+</div>
+
 
         <!-- Message Form -->
         <div class="message-form">
