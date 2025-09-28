@@ -27,36 +27,26 @@ header {
 /* Logo + brand logos container */
 .logo {
     display: flex;
-    align-items: center; /* vertically center with nav and header-icons */
-    gap: 80px; /* space between company logo and brand logos */
+    align-items: center; 
+    gap: 80px; 
 }
 
 /* Company logo */
 .company-logo img {
-    height: 70px; /* adjust as needed */
+    height: 80px; 
+    filter: drop-shadow(0px 3px 2px rgba(0,0,0,0.3))
+            drop-shadow(0px 6px 5px rgba(0,0,0,0.2));
 }
 
 /* Brand icons next to company logo */
 .brand-icons {
     display: flex;
-    gap: 70px; /* space between brand logos */
-    align-items: center; /* vertically center logos */
-}
-/* 3D shadow effect for company logo */
-.company-logo img {
-    height: 80px; /* adjust as needed */
-    filter: drop-shadow(0px 3px 2px rgba(0,0,0,0.3))
-            drop-shadow(0px 6px 5px rgba(0,0,0,0.2));
+    gap: 70px; 
+    align-items: center; 
 }
 
-/* 3D shadow effect for brand logos */
 .brand-icons img {
-    height: 40px; /* adjust as needed */
-    filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3))
-            drop-shadow(0px 4px 3px rgba(0,0,0,0.2));
-}
-.brand-icons img {
-    height: 70px; /* smaller than company logo */
+    height: 70px; 
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -69,68 +59,58 @@ header {
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 80px; /* spacing between menu items */
+    gap: 60px; 
 }
-/* Menu items normal state */
+
+header nav ul li a.active {
+    text-shadow: 0 0 8px #fff, 0 0 16px #ddd, 0 0 24px #bbb; 
+    color: #ffb700; 
+}
+
 header nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: 700;
     position: relative;
     transition: all 0.3s ease;
-}
-
-/* Menu items normal state */
-header nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* persistent shadow */
-    display: inline-block; /* ensures transform affects only this item */
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-/* 3D pop effect on hover */
-header nav ul li a:hover {
-    transform: scale(1.2) translateY(-2px); /* only hovered text grows */
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.5); /* intensify shadow */
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    display: inline-block;
 }
 
 header nav ul li a:hover {
+    transform: scale(1.2) translateY(-2px);
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     color: #555;
 }
 
-/* Header icons (account/cart) */
+/* Header icons */
 header .header-icons {
     display: flex;
     gap: 20px;
 }
 
-/* Header icons (account/cart) normal state */
 header .header-icons .icon {
     font-size: 22px;
     text-decoration: none;
     color: #000;
-    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease; /* smooth effect */
-    display: inline-block; /* ensures transform affects only hovered icon */
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* persistent shadow */
-}
-
-/* Pop effect on hover for account/cart */
-header .header-icons .icon:hover {
-    transform: scale(1.3) translateY(-2px); /* icon gets bigger and lifts up */
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.5); /* intensified shadow */
-    color: #555; /* optional color change */
+    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 header .header-icons .icon:hover {
+    transform: scale(1.3) translateY(-2px);
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     color: #555;
 }
 
 /* ------------------ Hero Slider ------------------ */
 .hero {
     width: 100%;
-    height: 720px; /* adjust as needed */
+    height: 720px; 
     position: relative;
     margin-bottom: 50px;
 }
@@ -184,7 +164,7 @@ header .header-icons .icon:hover {
     color: #000;
 }
 
-/* ------------------ Swiper Arrows ------------------ */
+/* Swiper Arrows */
 .swiper-button-next,
 .swiper-button-prev {
     top: 50% !important;
@@ -203,6 +183,62 @@ header .header-icons .icon:hover {
     font-weight: bold;
 }
 
+/* Slide text that moves */
+.slide-text {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px) scale(0.7);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    z-index: 5;
+    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.6s ease;
+}
+
+.swiper-slide-active .slide-text {
+    transform: translateX(-50%) translateY(0) scale(1.2); 
+    opacity: 1;
+}
+
+.slide-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.slide-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+/* Fixed Shop Now Button */
+.fixed-shop {
+    position: absolute;
+    top: 85%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+}
+
+.fixed-shop .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.fixed-shop .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* ------------------ Featured Products ------------------ */
 .featured-products {
     padding: 50px;
@@ -216,10 +252,14 @@ header .header-icons .icon:hover {
 }
 
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    display: flex;
+    justify-content: center; /* centers the cards horizontally */
+    gap: 30px;               /* space between cards */
+    flex-wrap: wrap;         /* allows wrapping on smaller screens */
+    margin: 50px auto;       /* center the container horizontally */
+    max-width: 650px;        /* optional: limits the total width of both cards */
 }
+
 
 .product-card {
     border: 1px solid #000;
@@ -315,14 +355,106 @@ footer .social-links a:hover {
     }
 
     .hero {
-        height: 500px; /* adjust for mobile */
+        height: 500px; 
     }
 
     .brand-icons img {
-        height: 30px; /* smaller on mobile */
+        height: 30px; 
     }
 
     .company-logo img {
-        height: 50px; /* smaller on mobile */
+        height: 50px; 
     }
+}
+
+/* ---------- Partner Cards (Katanukiya / GildArt) ---------- */
+.partner-cards-grid {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(298px, 1fr));
+  gap: 30px;
+  align-items: center;      /* changed from start to center */
+  justify-items: center;    /* added to center cards horizontally */
+}
+
+.partner-card {
+  width: 298px; 
+  height: 186px; 
+  overflow: visible; /* allow logo to appear above the card */
+  border-radius: 15px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-media {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures the image fills the card without stretching */
+    display: block;
+    border-radius: 15px; /* match card’s rounded corners */
+}
+
+.card-logo {
+    position: absolute;
+    top: -40px; /* move logo up */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;  /* 30% bigger than original 60px */
+    height: 78px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 5;
+}
+.card-logo img {
+    width: 52px; /* 30% bigger than original 40px */
+    height: 52px;
+    object-fit: contain;
+}
+
+.partner-card .btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.partner-card:hover .btn {
+  opacity: 1;
+}
+
+.partner-card:hover {
+  transform: translateY(-14px) rotateX(2deg) translateZ(6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+.partner-card:hover .card-img {
+  transform: scale(1.12) rotateX(6deg) rotateY(-6deg);
+  filter: brightness(1.05) saturate(1.05);
+}
+
+.partner-card:hover .card-logo {
+  transform: translateX(-50%) translateY(-6px) scale(1.18);
+  filter: drop-shadow(0 10px 30px rgba(255,183,0,0.35));
+}
+
+@media (max-width: 640px) {
+  .card-media { height: 220px; }
+  .card-logo { width: 90px; top: -20px; } /* adjust for small screens */
+  .partner-cards-grid { gap: 18px; padding: 0 16px; }
 }

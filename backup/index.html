@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SweetDelights - Home</title>
+    <title>GrapeTree - Home</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -17,73 +32,73 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <div class="company-logo">
-    <img src="company-logo.svg" alt="SweetDelights">
-</div>
-            <!-- Brand Logos Next to Company Logo -->
-            <div class="brand-icons">
-                <a href="cake.html"><img src="cake-logo.svg" alt="Cake"></a>
-                <a href="chocolate.html"><img src="chocolate-logo.svg" alt="Chocolate"></a>
-            </div>
+   <header>
+    <div class="logo">
+        <div class="company-logo">
+            <img src="company-logo.svg" alt="GrapeTree">
         </div>
-
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="policies.html">Policies</a></li>
-            </ul>
-        </nav>
-
-        <!-- Header Icons (Account / Cart) -->
-        <div class="header-icons">
-            <a href="account.html" class="icon">👤</a>
-            <a href="cart.html" class="icon">🛒</a>
+        <div class="brand-icons">
+            <a href="cake.html"><img src="cake-logo.svg" alt="Cake"></a>
+            <a href="chocolate.html"><img src="chocolate-logo.svg" alt="Chocolate"></a>
         </div>
-    </header>
+    </div>
 
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li> <!-- Change "active" depending on page -->
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Philosophy.html">Philosophy</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Icons (Account / Cart) -->
+    <div class="header-icons">
+        <a href="account.html" class="icon">👤</a>
+        <a href="cart.html" class="icon">🛒</a>
+    </div>
+</header>
     <!-- Hero Slider -->
-    <section class="hero">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
-                    <div class="slide-content">
-                        <h2>Handcrafted Sweets</h2>
-                        <p>Delicious treats for every occasion</p>
-                        <a href="shop.html" class="btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
-                    <div class="slide-content">
-                        <h2>Gifts for Your Loved Ones</h2>
-                        <p>Beautifully packaged and ready to gift</p>
-                        <a href="shop.html" class="btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url('images/slide3.jpg');">
-                    <div class="slide-content">
-                        <h2>Premium Quality Ingredients</h2>
-                        <p>Fresh and delicious in every bite</p>
-                        <a href="shop.html" class="btn">Shop Now</a>
-                    </div>
+   <section class="hero">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
+                <div class="slide-text">
+                    <h2>Handcrafted Sweets</h2>
+                    <p>Delicious treats for every occasion</p>
                 </div>
             </div>
-
-            <!-- Navigation Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
+                <div class="slide-text">
+                    <h2>Gifts for Your Loved Ones</h2>
+                    <p>Beautifully packaged and ready to gift</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('images/slide3.jpg');">
+                <div class="slide-text">
+                    <h2>Premium Quality Ingredients</h2>
+                    <p>Fresh and delicious in every bite</p>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Fixed Shop Now Button -->
+    <div class="fixed-shop">
+        <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+</section>
 
     <!-- Featured Products -->
     <section class="featured-products">
-        <h2>Our Featured Products</h2>
+        <h2>Our Products</h2>
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-image"><img src="images/product1.jpg" alt="Golden Castella"></div>
@@ -108,7 +123,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 SweetDelights. All rights reserved.</p>
+        <p>&copy; 2025 GrapeTree. All rights reserved.</p>
         <div class="social-links">
             <a href="#">Instagram</a> |
             <a href="#">Facebook</a> |
