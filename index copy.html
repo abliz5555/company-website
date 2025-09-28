@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Grape Tree FZE - Explore more about our premium cakes and desserts.">
+    <meta name="keywords" content="custom cakes, desserts, Grape Tree, Budounoki">
+    <meta name="author" content="Budounoki Ltd.">
+    <title>Welcome - Grape Tree FZE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Full screen background container */
+        .background-container {
+            position: absolute;  /* Use absolute positioning instead of fixed */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover; /* Ensure background covers entire screen */
+            background-position: center;
+            background-attachment: fixed; /* Fix the background while content scrolls */
+            animation: backgroundFade 9s infinite; /* Background animation */
+            z-index: -1; /* Ensure background is behind content */
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Grape Tree FZE - Explore more about our premium cakes and desserts.">
+    <meta name="keywords" content="custom cakes, desserts, Grape Tree, Budounoki">
+    <meta name="author" content="Budounoki Ltd.">
+    <title>Welcome - Grape Tree FZE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Full screen background container */
+        .background-container {
+            position: absolute;  /* Use absolute positioning instead of fixed */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover; /* Ensure background covers entire screen */
+            background-position: center;
+            background-attachment: fixed; /* Fix the background while content scrolls */
+            animation: backgroundFade 9s infinite; /* Background animation */
+            z-index: -1; /* Ensure background is behind content */
+        }
+
+        /* Keyframe animation for background images */
+        @keyframes backgroundFade {
+            0% {
+                background-image: url('images/header-image.jpg.jpg');
+            }
+            33% {
+                background-image: url('images/DSC_5528.JPG');
+            }
+            66% {
+                background-image: url('images/custella.JPG');
+            }
+            100% {
+                background-image: url('images/cutoutcake.jpg');
+            }
+        }
+
+        /* Main container for content */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            min-height: 100vh; /* Ensure content stretches full height */
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1; /* Make sure content stays on top */
+        }
+
+        /* Information Section */
+        .info-section {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .info-section h1 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .info-section .visit-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #ffd700;
+            color: #000;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
+        .info-section .visit-btn:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Message Form */
+        .message-form {
+            width: 90%; /* Responsive width */
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .message-form h2 {
+            margin-top: 0;
+            color: #444;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .message-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message-form input,
+        .message-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .message-form textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .message-form button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background: #444;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .message-form button:hover {
+            background: #ffd700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 10px;
+            }
+
+            .info-section, .message-form {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .info-section h1 {
+                font-size: 1.2em;
+            }
+
+            .message-form h2 {
+                font-size: 1.1em;
+            }
+
+            .info-section .visit-btn {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Container -->
+    <div class="background-container"></div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Information Section -->
+        <div class="info-section">
+            <h1>About Us</h1>
+            <p><strong>Grape Tree FZE</strong>, a branch of <strong>Budounoki Co., Ltd.</strong> based in Japan, is renowned for its custom-made cakes and desserts. We specialize in crafting wholesale custom layer cakes, including intricately designed cut-out cakes and the famous golden castella cakes. With our expert craftsmanship and dedication to quality, we cater to both individual and corporate events, ensuring that every sweet creation is a true masterpiece.</p>
+            <p><strong>Contact Us:</strong></p>
+            <p>Email: <a href="mailto:info@grapetree.ae" style="color: #ffd700;">info@grapetree.ae</a></p>
+            <p>Phone: +971 54-530-8886</p>
+            <p><strong>Location:</strong> Sharjah Airport Free Zone (SAIF ZONE), T5-69.</p>
+            <a href="https://www.katanuki-ya.com" class="visit-btn" target="_blank">Official Website</a>
+        </div>
+
+        <!-- Message Form -->
+        <div class="message-form">
+            <h2>Leave Us a Message</h2>
+            <form action="https://formspree.io/f/mlddakry" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
