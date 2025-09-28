@@ -458,3 +458,225 @@ footer .social-links a:hover {
   .card-logo { width: 90px; top: -20px; } /* adjust for small screens */
   .partner-cards-grid { gap: 18px; padding: 0 16px; }
 }
+/* ------------------ Full Mobile Responsive CSS ------------------ */
+body {
+    min-width: 360px; /* standard small phone width */
+}
+
+@media (max-width: 768px) {
+    /* ------------------ Header ------------------ */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #fff;
+    }
+
+    /* Company logo top */
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .company-logo img {
+        height: 60px;
+    }
+
+    /* Product logos below company logo */
+    .brand-icons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .brand-icons img {
+        height: 40px;
+    }
+
+    /* Navigation menu horizontal */
+    header nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Account & Cart icons top-right corner */
+    header .header-icons {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        gap: 15px;
+    }
+
+    header .header-icons .icon {
+        font-size: 24px;
+    }
+
+    /* ------------------ Hero Slider ------------------ */
+    .hero {
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    .slide-text {
+        top: 10%;
+        transform: translateX(-50%) scale(1);
+        text-align: center;
+    }
+
+    .slide-text h2 {
+        font-size: 26px;
+    }
+
+    .slide-text p {
+        font-size: 14px;
+    }
+
+    .fixed-shop .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Swiper buttons smaller */
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 22px;
+    }
+
+    /* ------------------ Featured Products ------------------ */
+    .featured-products {
+        padding: 30px 15px;
+    }
+
+    .featured-products h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .products-grid {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .product-card .product-image img {
+        height: 180px;
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+    }
+
+    .product-card p {
+        font-size: 16px;
+    }
+
+    .product-card .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    /* ------------------ Partner Cards ------------------ */
+    .partner-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .card-media {
+        height: 180px;
+    }
+
+    .card-logo {
+        width: 70px;
+        height: 70px;
+        top: -25px;
+    }
+
+    .card-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* ------------------ Footer ------------------ */
+    footer {
+        padding: 20px 15px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer .social-links a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+}
+
+/* ------------------ Very Small Phones (360px-480px) ------------------ */
+@media (max-width: 480px) {
+    .hero {
+        height: 320px;
+    }
+
+    .slide-text h2 {
+        font-size: 22px;
+    }
+
+    .slide-text p {
+        font-size: 12px;
+    }
+
+    .fixed-shop .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .product-card .product-image img {
+        height: 150px;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+    }
+
+    .product-card .btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .partner-card .card-media {
+        height: 160px;
+    }
+
+    .card-logo {
+        width: 60px;
+        height: 60px;
+        top: -20px;
+    }
+
+    .card-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    header nav ul {
+        gap: 8px;
+    }
+}
