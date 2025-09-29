@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>GrapeTree - Home</title>
 
-    <title>GrapeTree - Home</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/global.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/global.css">
-
-
-    <!-- Swiper Slider Library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <!-- Swiper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
 
-    <!-- Header -->
-   <header>
+  <!-- Header -->
+  <header>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <div class="logo">
         <div class="company-logo">
             <img src="company-logo.svg" alt="GrapeTree">
         </div>
-        <div class="brand-icons">
-            <a href="cake.html"><img src="cake-logo.svg" alt="Cake"></a>
-            <a href="chocolate.html"><img src="chocolate-logo.svg" alt="Chocolate"></a>
-        </div>
     </div>
 
-    <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li> <!-- Change "active" depending on page -->
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -57,145 +46,130 @@
         </ul>
     </nav>
 
-    <!-- Header Icons (Account / Cart) -->
     <div class="header-icons">
         <a href="account.html" class="icon">👤</a>
         <a href="cart.html" class="icon">🛒</a>
     </div>
 </header>
-    <!-- Hero Slider -->
-   <section class="hero">
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
-                <div class="slide-text">
-                    <h2>Handcrafted Sweets</h2>
-                    <p>Delicious treats for every occasion</p>
-                </div>
-            </div>
-            <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
-                <div class="slide-text">
-                    <h2>Gifts for Your Loved Ones</h2>
-                    <p>Beautifully packaged and ready to gift</p>
-                </div>
-            </div>
-            <div class="swiper-slide" style="background-image: url('images/slide3.jpg');">
-                <div class="slide-text">
-                    <h2>Premium Quality Ingredients</h2>
-                    <p>Fresh and delicious in every bite</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Navigation Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
+          <div class="slide-text">
+            <h2>Handcrafted Sweets</h2>
+            <p>Delicious treats for every occasion</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
+          <div class="slide-text">
+            <h2>Gifts for Your Loved Ones</h2>
+            <p>Beautifully packaged and ready to gift</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/slide3.jpg');">
+          <div class="slide-text">
+            <h2>Premium Quality Ingredients</h2>
+            <p>Fresh and delicious in every bite</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <!-- Fixed Shop Now Button -->
     <div class="fixed-shop">
-        <a href="shop.html" class="btn">Shop Now</a>
+      <a href="shop.html" class="btn">Shop Now</a>
     </div>
-</section>
+  </section>
 
   <!-- Featured Products -->
-<section class="featured-products">
-  <h2>Our Products</h2>
-  <div class="partner-cards-grid">
+  <section class="featured-products">
+    <h2>Our Products</h2>
+    <div class="partner-cards-grid">
       <div class="partner-card">
-          <div class="card-media">
-              <img src="cake-image.JPG" class="card-img" alt="Golden Castella">
-          </div>
-          <!-- Logo is now clickable and transforms into button -->
-          <a href="shop.html" class="card-logo">
-              <img src="cake-logo.svg" alt="Cake Logo">
-              <span class="btn-text">Shop Now</span>
-          </a>
-      </div>
-
-      <div class="partner-card">
-          <div class="card-media">
-              <img src="cake-image.JPG" class="card-img" alt="Cut Out Cake">
-          </div>
-          <a href="shop.html" class="card-logo">
-              <img src="cake-logo.svg" alt="Cake Logo">
-              <span class="btn-text">Shop Now</span>
-          </a>
-      </div>
-
-      <div class="partner-card">
-          <div class="card-media">
-              <img src="chocolate-image.svg" class="card-img" alt="Chocolate">
-          </div>
-          <a href="shop.html" class="card-logo">
-              <img src="chocolate-logo.svg" alt="Chocolate Logo">
-              <span class="btn-text">Shop Now</span>
-          </a>
-      </div>
-  </div>
-</section>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 GrapeTree. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#">Instagram</a> |
-            <a href="#">Facebook</a> |
-            <a href="#">Twitter</a>
+        <div class="card-media">
+          <img src="cake-image.JPG" class="card-img" alt="Golden Castella">
         </div>
-    </footer>
+        <a href="shop.html" class="card-logo">
+          <img src="cake-logo.svg" alt="Cake Logo">
+          <span class="btn-text">Shop Now</span>
+        </a>
+      </div>
 
-    <!-- JS Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <div class="partner-card">
+        <div class="card-media">
+          <img src="cake-image.JPG" class="card-img" alt="Cut Out Cake">
+        </div>
+        <a href="shop.html" class="card-logo">
+          <img src="cake-logo.svg" alt="Cake Logo">
+          <span class="btn-text">Shop Now</span>
+        </a>
+      </div>
 
-    <!-- Initialize Slider -->
-    <script>
-        const swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-    <!-- Your HTML content -->
+      <div class="partner-card">
+        <div class="card-media">
+          <img src="chocolate-image.svg" class="card-img" alt="Chocolate">
+        </div>
+        <a href="shop.html" class="card-logo">
+          <img src="chocolate-logo.svg" alt="Chocolate Logo">
+          <span class="btn-text">Shop Now</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-<script>
-  const cards = document.querySelectorAll('.partner-card');
-  let activeCard = null;
-  let timeoutId = null;
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GrapeTree. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      // Remove active from previous card
-      if (activeCard && activeCard !== card) {
-        activeCard.classList.remove('active');
-        clearTimeout(timeoutId);
-      }
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-      // Activate current card
-      card.classList.add('active');
-      activeCard = card;
-
-      // Auto-revert after 5 seconds
-      timeoutId = setTimeout(() => {
-        card.classList.remove('active');
-        activeCard = null;
-      }, 5000);
+  <!-- Initialize Slider -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
-  });
-</script>
-</body>
+  </script>
 
+
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('header nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
+  
+  
 </body>
 </html>
