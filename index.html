@@ -25,7 +25,9 @@
 
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/global.css">
+
 
     <!-- Swiper Slider Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
@@ -97,30 +99,43 @@
     </div>
 </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <h2>Our Products</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image"><img src="images/product1.jpg" alt="Golden Castella"></div>
-                <h3>Golden Castella</h3>
-                <p>$25</p>
-                <a href="shop.html" class="btn">Shop Now</a>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><img src="images/product2.jpg" alt="Custom Cut Cake"></div>
-                <h3>Custom Cut Cake</h3>
-                <p>$30</p>
-                <a href="shop.html" class="btn">Shop Now</a>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><img src="images/product3.jpg" alt="Chocolate Delights"></div>
-                <h3>Chocolate Delights</h3>
-                <p>$20</p>
-                <a href="shop.html" class="btn">Shop Now</a>
-            </div>
-        </div>
-    </section>
+  <!-- Featured Products -->
+<section class="featured-products">
+  <h2>Our Products</h2>
+  <div class="partner-cards-grid">
+      <div class="partner-card">
+          <div class="card-media">
+              <img src="cake-image.JPG" class="card-img" alt="Golden Castella">
+          </div>
+          <!-- Logo is now clickable and transforms into button -->
+          <a href="shop.html" class="card-logo">
+              <img src="cake-logo.svg" alt="Cake Logo">
+              <span class="btn-text">Shop Now</span>
+          </a>
+      </div>
+
+      <div class="partner-card">
+          <div class="card-media">
+              <img src="cake-image.JPG" class="card-img" alt="Cut Out Cake">
+          </div>
+          <a href="shop.html" class="card-logo">
+              <img src="cake-logo.svg" alt="Cake Logo">
+              <span class="btn-text">Shop Now</span>
+          </a>
+      </div>
+
+      <div class="partner-card">
+          <div class="card-media">
+              <img src="chocolate-image.svg" class="card-img" alt="Chocolate">
+          </div>
+          <a href="shop.html" class="card-logo">
+              <img src="chocolate-logo.svg" alt="Chocolate Logo">
+              <span class="btn-text">Shop Now</span>
+          </a>
+      </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
@@ -153,5 +168,34 @@
             },
         });
     </script>
+    <!-- Your HTML content -->
+
+<script>
+  const cards = document.querySelectorAll('.partner-card');
+  let activeCard = null;
+  let timeoutId = null;
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // Remove active from previous card
+      if (activeCard && activeCard !== card) {
+        activeCard.classList.remove('active');
+        clearTimeout(timeoutId);
+      }
+
+      // Activate current card
+      card.classList.add('active');
+      activeCard = card;
+
+      // Auto-revert after 5 seconds
+      timeoutId = setTimeout(() => {
+        card.classList.remove('active');
+        activeCard = null;
+      }, 5000);
+    });
+  });
+</script>
+</body>
+
 </body>
 </html>
