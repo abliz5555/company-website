@@ -1,4 +1,3 @@
-/* ------------------ General Styles ------------------ */
 * {
     margin: 0;
     padding: 0;
@@ -25,47 +24,22 @@ header {
     z-index: 1000;
 }
 
-/* Logo + brand logos container */
 .logo {
     display: flex;
     align-items: center; 
     gap: 80px; 
 }
 
-/* Company logo */
 .company-logo img {
     height: 80px; 
     filter: drop-shadow(0px 3px 2px rgba(0,0,0,0.3))
             drop-shadow(0px 6px 5px rgba(0,0,0,0.2));
 }
 
-/* Brand icons next to company logo */
-.brand-icons {
-    display: flex;
-    gap: 70px; 
-    align-items: center; 
-}
-
-.brand-icons img {
-    height: 70px; 
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.brand-icons img:hover {
-    transform: scale(1.1);
-}
-
-/* Navigation menu */
 header nav ul {
     display: flex;
     list-style: none;
     gap: 60px; 
-}
-
-header nav ul li a.active {
-    text-shadow: 0 0 8px #fff, 0 0 16px #ddd, 0 0 24px #bbb; 
-    color: #ffb700; 
 }
 
 header nav ul li a {
@@ -81,25 +55,20 @@ header nav ul li a {
     display: inline-block;
 }
 
+header nav ul li a.active {
+    text-shadow: 0 0 8px #fff, 0 0 16px #ddd, 0 0 24px #bbb; 
+    color: #ffb700; 
+}
+
 header nav ul li a:hover {
     transform: scale(1.2) translateY(-2px);
     text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     color: #555;
 }
 
-/* Header icons */
 header .header-icons {
     display: flex;
     gap: 20px;
-}
-
-header .header-icons .icon {
-    font-size: 22px;
-    text-decoration: none;
-    color: #000;
-    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
-    display: inline-block;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 header .header-icons .icon:hover {
@@ -165,7 +134,6 @@ header .header-icons .icon:hover {
     color: #000;
 }
 
-/* Swiper Arrows */
 .swiper-button-next,
 .swiper-button-prev {
     top: 50% !important;
@@ -215,150 +183,44 @@ header .header-icons .icon:hover {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
-/* Fixed Shop Now Button */
-.fixed-shop {
-    position: absolute;
-    top: 85%; 
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10; 
-}
-
-.fixed-shop .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 2px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    border-radius: 5px;
-}
-
-.fixed-shop .btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
 /* ------------------ Partner Cards ------------------ */
-/* Partner Cards Grid */
 .partner-cards-grid {
     max-width: 1200px;
     margin: 0 auto 80px;
     padding: 0 24px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(298px, 1fr));
-    gap: 30px; /* default gap for desktop */
+    gap: 30px;
     align-items: center;
     justify-items: center;
 }
 
 .partner-card {
-    width: 298px;
-    height: 186px;
     position: relative;
-    background: #fff;
-    border-radius: 30px;
+    width: 298px;  
+    height: 186px; 
+    border-radius: 15px;
+    overflow: visible; 
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    overflow: visible;
-    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s ease;
-    perspective: 1500px;
+    transition: transform 0.45s cubic-bezier(.2,.9,.3,1), box-shadow 0.45s;
 }
 
-/* Card image */
-.card-media {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 30px;
-    transition: transform 0.6s ease, filter 0.3s ease;
-}
-
-.card-img {
+.partner-card .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 30px;
+    transition: transform 0.6s cubic-bezier(.2,.9,.3,1), filter 0.6s;
 }
 
-/* Card logo */
-.card-logo {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 78px;
-    height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10; 
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: all 0.6s ease;
-}
-
-.card-logo img {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-    transition: opacity 0.3s ease;
-    z-index: 15;
-}
-
-/* Hover effects for partner cards */
 .partner-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
 }
 
-.partner-card:hover .card-media {
-    transform: scale(1.12) rotateX(6deg) rotateY(-6deg);
-}
-
-/* ------------------ Responsive ------------------ */
-
-/* Tablets & small laptops */
-@media (max-width: 1024px) {
-    .partner-cards-grid {
-        justify-items: center;
-    }
-}
-
-/* Mobile phones (portrait tablets & larger phones) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    header nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .slide-content h2 { font-size: 28px; }
-    .slide-content p { font-size: 16px; }
-    .hero { height: 500px; }
-    .brand-icons img { height: 30px; }
-    .company-logo img { height: 50px; }
-
-    /* Increase gap between partner cards by 30% */
-    .partner-cards-grid {
-        gap: 39px; /* 30px × 1.3 */
-    }
-}
-
-/* Small mobile phones */
-@media (max-width: 480px) {
-    .hero { height: 320px; }
-    .slide-text h2 { font-size: 22px; }
-    .slide-text p { font-size: 12px; }
-    .fixed-shop .btn { padding: 8px 16px; font-size: 12px; }
-    header nav ul { gap: 8px; }
+.partner-card:hover .card-img {
+    transform: scale(1.12);
+    filter: brightness(1.05) saturate(1.05);
 }
 
 /* ------------------ Footer ------------------ */
@@ -368,10 +230,6 @@ footer {
     background-color: #000;
     color: #fff;
     margin-top: 50px;
-}
-
-footer .social-links {
-    margin-top: 15px;
 }
 
 footer .social-links a {
@@ -385,23 +243,14 @@ footer .social-links a:hover {
     color: #ccc;
 }
 
-
 /* ------------------ Responsive ------------------ */
 @media (max-width: 1024px) {
     .partner-cards-grid { justify-items: center; }
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    header nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
+    header { flex-direction: column; gap: 15px; }
+    header nav ul { flex-direction: column; gap: 15px; }
     .slide-content h2 { font-size: 28px; }
     .slide-content p { font-size: 16px; }
     .hero { height: 500px; }
@@ -413,7 +262,6 @@ footer .social-links a:hover {
     .hero { height: 320px; }
     .slide-text h2 { font-size: 22px; }
     .slide-text p { font-size: 12px; }
-    .fixed-shop .btn { padding: 8px 16px; font-size: 12px; }
     header nav ul { gap: 8px; }
 }
 /* ------------------ Featured Products Title ------------------ */
@@ -451,163 +299,37 @@ footer .social-links a:hover {
     perspective: 1500px;
 }
 
-/* Card Image */
+/* Partner Card Image - smaller and centered */
 .card-media {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
     overflow: hidden;
     border-radius: 30px;
-    transition: transform 0.6s ease, filter 0.3s ease;
+    padding: 10px 0; /* optional spacing */
 }
 
-.card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 30px;
-}
-
-/* Logo container with solid white background initially */
-.card-logo {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 78px;
-    height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10; 
-    background: #fff; /* solid white */
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: all 0.6s ease; /* smooth back transition */
-}
-
-/* Logo image */
-.card-logo img {
-    width: 52px;
-    height: 52px;
+.card-media .card-img {
+    width: 60%;   /* 40% smaller than full card width */
+    height: auto; /* maintain aspect ratio */
     object-fit: contain;
-    transition: opacity 0.3s ease;
-    z-index: 15; 
+    display: block;
+}
+/* Left card (first card) image smaller */
+.partner-cards-grid .partner-card:nth-child(1) .card-img {
+    width: 60%; /* smaller size only for left card */
 }
 
-/* ------------------ Liquid morph keyframes for hover-in */
-@keyframes liquid-drop-strong {
-    0% {
-        top: -40px;
-        width: 78px;
-        height: 78px;
-        border-radius: 50%;
-    }
-    20% {
-        top: 70px;
-        width: 140px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    100% {
-        top: 180px; /* bottom of card */
-        width: 140px;
-        height: 40px;
-        border-radius: 20px;
-    }
-}
-
-/* ------------------ Liquid morph keyframes for hover-out (reverse) */
-@keyframes liquid-drop-reverse {
-    0% {
-        top: 180px;
-        width: 140px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    100% {
-        top: -40px;
-        width: 78px;
-        height: 78px;
-        border-radius: 50%;
-    }
-}
-
-/* ------------------ Hover Effects */
-/* ------------------ Apply Shop Page Hover Effect to Partner Card ------------------ */
-.partner-card:hover {
-    transform: translateY(-10px) scale(1.05); /* same as product-card hover */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25); /* same as product-card hover */
+/* Right card (second card) image stays 60% */
+.partner-cards-grid .partner-card:nth-child(2) .card-img {
+    width: 45%; 
 }
 
 
-.partner-card:hover .card-media {
-    transform: scale(1.12) rotateX(6deg) rotateY(-6deg);
-}
 
-/* Logo transforms into button on hover */
-.partner-card:hover .card-logo {
-    animation: liquid-drop-strong 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    background: transparent; /* transparent for frosted effect */
-}
 
-.partner-card:hover .card-logo img {
-    opacity: 0; /* hide logo image */
-}
-
-/* ------------------ Shop Now text/button */
-.card-logo .btn-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: 700;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 16px;
-
-    /* frosted glass background */
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: inherit;
-    border: 1px solid rgba(255,255,255,0.2);
-
-    opacity: 0; /* initially hidden */
-    pointer-events: none;
-    transition: opacity 0.3s ease; /* only for hover-in */
-    z-index: 5;
-}
-
-.partner-card:hover .card-logo .btn-text {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* ------------------ Smooth reverse transition for logo and button */
-.partner-card:not(:hover) .card-logo {
-    animation: liquid-drop-reverse 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* faster reverse */
-    background: #fff; /* restore logo background */
-}
-
-.partner-card:not(:hover) .card-logo img {
-    opacity: 1; /* logo reappears smoothly */
-}
-
-.partner-card:not(:hover) .card-logo .btn-text {
-    opacity: 0; /* text vanishes immediately */
-    pointer-events: none;
-}
-
-/* Make logo clickable */
-.card-logo {
-    text-decoration: none;
-}
 /* Active state for mobile touch */
 .partner-card.active .card-logo {
     animation: liquid-drop-strong 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
