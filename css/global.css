@@ -6,6 +6,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
 body {
     background-color: #fff;
     color: #000;
@@ -268,3 +269,7 @@ input:focus, textarea:focus {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     transform: translateY(-1px);
 }
+html {
+  scroll-behavior: smooth;
+}
+

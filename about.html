@@ -1,77 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - GrapeTree</title>
-    <link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrapeTree - About</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/global.css">
+
+  
+
+  <style>
+    /* ================= About Sections ================== */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 24px;
+      flex-wrap: wrap;
+    }
+
+    .about-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .about-slider {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-slider img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-section:nth-child(even) {
+        flex-direction: column;
+      }
+      .about-text, .about-slider {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header (same as Shop page) -->
-    <header>
-        <div class="logo">
-            <div class="company-logo">
-                <img src="company-logo.svg" alt="SweetDelights">
-            </div>
-            <div class="brand-icons">
-                <a href="cake.html"><img src="cake-logo.svg" alt="Cake"></a>
-                <a href="chocolate.html"><img src="chocolate-logo.svg" alt="Chocolate"></a>
-            </div>
-        </div>
+<header>
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-   <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="philosophy.html">Philosophy</a></li>
+  <div class="logo">
+    <div class="company-logo">
+      <img src="images/company-logo.svg" alt="GrapeTree">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-</nav>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    nav ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    nav ul.active {
+      max-height: 300px; /* adjust if more items */
+    }
+  }
+</style>
 
 
-        <div class="header-icons">
-            <a href="account.html" class="icon">👤</a>
-            <a href="cart.html" class="icon">🛒</a>
-        </div>
-    </header>
 
-    <!-- Main About Section -->
-    <main class="about-page">
-        <section class="about-hero">
-            <h1>About GrapeTree</h1>
-            <p>Crafting happiness, one slice at a time.</p>
-        </section>
 
-        <section class="about-content">
-            <h2>Our Story</h2>
-            <p>
-                GrapeTree was founded with a passion for creating unique, delicious, and beautifully designed cakes and chocolates. 
-                From humble beginnings, we have grown into a beloved brand known for creativity, quality, and innovation. 
-            </p>
+  <!-- ================= About Content with sliders ================== -->
 
-            <h2>Our Mission</h2>
-            <p>
-                To bring joy and sweetness to every celebration with products that not only taste amazing but also look unforgettable.
-            </p>
+  <!-- Section 1 -->
+  <section class="about-section">
+    <div class="about-slider swiper mySwiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/thumbnail_IMG_7854.jpg" alt="UAE Office"></div>
+         <div class="swiper-slide"><img src="images/thumbnail_IMG_0685.jpg" alt="UAE Office"></div>
+        <div class="swiper-slide"><img src="images/thumbnail_IMG_0675.jpg" alt="UAE Office"></div>
+       
+        
+      </div>
+    </div>
+    <div class="about-text">
+      <h3>Our UAE Branch</h3>
+      <p>Grape Tree FZE, established in 2024 in Sharjah Airport Free Zone, specializes in luxury confectionery products such as Katanukiya and GildArt Golden Chocolate. We bring Japanese craftsmanship to the UAE gifting market.</p>
+    </div>
+  </section>
 
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>✨ Unique character-printed cakes</li>
-                <li>🍫 Premium chocolates with golden finishes</li>
-                <li>🎂 Handmade with love and precision</li>
-                <li>🌍 Bringing Japanese quality to Dubai</li>
-            </ul>
-        </section>
-    </main>
+  <!-- Section 2 -->
+  <section class="about-section">
+    <div class="about-slider swiper mySwiper2">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide"><img src="images/budonomori.jpg" alt="Budonomori Japan"></div>
+        <div class="swiper-slide"><img src="images/cake-image.JPG" alt="Budonomori Japan"></div>
+        <div class="swiper-slide"><img src="images/rest_ton.jpg" alt="Budonomori Japan"></div>
+         <div class="swiper-slide"><img src="images/wedding.jpg" alt="Budonomori Japan"></div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h3>Our Parent Company</h3>
+      <p>Budonomori Co. Ltd, established in 1982 in Ishikawa, Japan, operates across multiple domains including restaurants, weddings, confectionery, and specialty retail. Their hospitality and craftsmanship inspire all Grape Tree products.</p>
+    </div>
+  </section>
 
-    <!-- Footer (same as Shop page) -->
-    <footer>
-        <p>&copy; 2025 GrapeTree. All Rights Reserved.</p>
-    </footer>
+  <!-- Section 3 -->
+  <section class="about-section">
+    <div class="about-slider swiper mySwiper3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/3D-Camel.jpg" alt="Katanukiya"></div>
+        <div class="swiper-slide"><img src="images/RealTouchCamel.jpg" alt="Katanukiya"></div>
+        <div class="swiper-slide"><img src="images/FlatStyleCamel.jpg" alt="Katanukiya"></div>
+         <div class="swiper-slide"><img src="images/CuteCamel.jpg" alt="Katanukiya"></div>
+          <div class="swiper-slide"><img src="images/IconicDubai.jpg" alt="Katanukiya"></div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h3>Signature Product - Katanukiya</h3>
+      <p>Katanukiya is our premium signature confectionery, crafted with attention to every detail. Designed for luxury gifting, it embodies the perfect balance of tradition, flavor, and artistry.</p>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="about-section">
+    <div class="about-slider swiper mySwiper4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/chocolate-image.svg" alt="GildArt Golden Chocolate"></div>
+       
+      </div>
+    </div>
+    <div class="about-text">
+      <h3>New Signature Product - GildArt Golden Chocolate</h3>
+      <p>Our latest creation, GildArt Golden Chocolate, is a luxurious confection made for the sophisticated gift market. Each piece reflects elegance, indulgence, and a unique gifting experience.</p>
+    </div>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="about-section">
+    <div class="about-slider swiper mySwiper5">
+      
+    </div>
+    <div class="about-text">
+      <h3>Our Mission & Vision</h3>
+      <p>We aim to provide unforgettable luxury gifting experiences by combining Japanese craftsmanship, premium ingredients, and modern design. Our vision is to be a leading brand in the high-end confectionery and gifting market worldwide.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GrapeTree. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  const productItem = document.querySelector('.nav-list li:nth-child(2)');
+
+  // Burger toggle
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+  });
+
+  // Toggle sub-list
+  productItem.addEventListener('click', () => {
+    productItem.classList.toggle('open');
+  });
+</script>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swipers -->
+<script>
+  const delays = [3000, 4000, 5000, 6000, 7000]; // different delays for each section (in ms)
+  for (let i = 1; i <= 5; i++) {
+    new Swiper(`.mySwiper${i}`, {
+      loop: true,
+      autoplay: {
+        delay: delays[i - 1],
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      effect: 'slide',
+    });
+  }
+</script>
+
 
 </body>
 </html>

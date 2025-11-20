@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrapeTree - Products</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/global.css">
+
+  <style>
+    /* ================= Sections Styling ================== */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 24px;
+      flex-wrap: wrap;
+    }
+
+    .about-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .about-slider {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-slider img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ================= Marquee Slider ================== */
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      margin: 60px 0;
+    }
+
+    .marquee-content {
+      display: flex;
+      gap: 20px;
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee-right .marquee-content {
+      animation: marquee-right 25s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes marquee-right {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .marquee-content img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Prevent horizontal scrollbar for footer and sections */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .marquee-content img {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Header -->
+  <header>
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="logo">
+    <div class="company-logo">
+      <img src="images/company-logo.svg" alt="GrapeTree">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" class="active">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ================= PRODUCT SECTIONS ================== -->
+
+  <!-- Product Section 1 (Katanukiya) -->
+   <section id="cake-product">
+  
+  <!-- Cake content here -->
+</section>
+<section class="about-section" style="flex-direction: row-reverse; gap: 40px;">
+  <div style="width:100%; text-align:center; margin-bottom:30px;">
+    <img src="images/cake-logo.svg" alt="Katanukiya Logo" style="max-width:200px; height:auto;">
+  </div>
+
+  <div class="about-slider" style="flex:0 0 15%; display:flex; flex-direction: column; gap:50px;">
+    <video autoplay loop muted playsinline style="width:100%; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+      <source src="images/sec2_movie01_2.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline style="width:100%; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+      <source src="images/video2.mp4" type="video/mp4">
+    </video>
+    <img src="images/work_photo01_2203.jpg" alt="Katanukiya" style="width:100%; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+  </div>
+
+  <div class="about-text">
+    <h3>Katanukiya - UAE</h3>
+    <p>
+      Katanukiya is a unique Japanese confectionery brand offering Baumkuchen cakes that can be enjoyed by “cutting out" cute characters printed on each cake. Designed with fun and gifting in mind, Katanukiya combines traditional Japanese quality with modern playful aesthetics.
+    </p>
+    <p>
+      <strong>Craftsmanship & Production:</strong><br>
+      • Carefully layered flat-style Baumkuchen, baked layer by layer to create beautiful textures<br>
+      • Precision-cut using a specialized water-jet cutter, enabling intricate lines and detailed character shapes<br>
+      • Each cake is printed along the cut lines for a playful and visually appealing design
+    </p>
+    <p>
+      <strong>Product Features:</strong><br>
+      • Flat-style Baumkuchen with printed character designs<br>
+      • Edible cut-out lines allow consumers to “cut out" the character before eating<br>
+      • Engaging and Instagrammable experience for children and adults alike
+    </p>
+    <p>
+      <strong>Packaging & Design:</strong><br>
+      • Beautifully boxed and individually wrapped<br>
+      • Gift-friendly Japanese-style design with seasonal and character-based variants<br>
+      • Licensed character collaborations in preparation (e.g., Sanrio)<br>
+      • OEM and private-label options available for large orders
+    </p>
+    <p>
+      <strong>Track Record & Target Market:</strong><br>
+      • Approximately 4 million units sold annually in Japan<br>
+      • Strong domestic sales at Tokyo Station, Haneda Airport, and major department stores<br>
+      • Proven demand from international travelers and retailers<br>
+      • Manufactured in-house to ensure quality control and timely supply<br>
+      • High-end gift shops, airport duty-free stores, department stores, and tourist locations in Japan
+    </p>
+  </div>
+</section>
+
+
+  <!-- Marquee Slider Right -->
+  <section style="max-width:1400px; margin:40px auto;">
+    <div class="about-slider marquee marquee-right">
+      <div class="marquee-content">
+        <img src="images/3D-Camel.jpg" alt="Katanukiya">
+        <img src="images/RealTouchCamel.jpg" alt="Katanukiya">
+        <img src="images/FlatStyleCamel.jpg" alt="Katanukiya">
+        <img src="images/CuteCamel.jpg" alt="Katanukiya">
+        <img src="images/IconicDubai.jpg" alt="Katanukiya">
+
+        <!-- Duplicate for loop -->
+        <img src="images/3D-Camel.jpg" alt="Katanukiya">
+        <img src="images/RealTouchCamel.jpg" alt="Katanukiya">
+        <img src="images/FlatStyleCamel.jpg" alt="Katanukiya">
+        <img src="images/CuteCamel.jpg" alt="Katanukiya">
+        <img src="images/IconicDubai.jpg" alt="Katanukiya">
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section 2 (GildArt) -->
+   <section id="chocolate-product">
+  <!-- Chocolate content here -->
+</section>
+  <section class="about-section" style="flex-direction: row; gap:150px;">
+    <div style="width:100%; text-align:center; margin-bottom:30px;">
+      <img src="images/chocolate-logo.svg" alt="GildArt Logo" style="max-width:200px; height:auto;">
+    </div>
+
+    <div class="about-slider swiper mySwiper4" style="flex:1; min-width:300px;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/chocolate-image.svg" alt="GildArt Golden Chocolate" style="width:100%; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h3>New Signature Product - GildArt Golden Chocolate</h3>
+      <p>Our latest creation, GildArt Golden Chocolate, is a luxurious confection...</p>
+    </div>
+  </section>
+
+  <!-- Marquee Slider Left -->
+  <section style="max-width:1400px; margin:40px auto;">
+    <div class="about-slider marquee">
+      <div class="marquee-content">
+        <img src="images/3D-Camel.jpg" alt="Katanukiya">
+        <img src="images/RealTouchCamel.jpg" alt="Katanukiya">
+        <img src="images/FlatStyleCamel.jpg" alt="Katanukiya">
+        <img src="images/CuteCamel.jpg" alt="Katanukiya">
+        <img src="images/IconicDubai.jpg" alt="Katanukiya">
+
+        <img src="images/3D-Camel.jpg" alt="Katanukiya">
+        <img src="images/RealTouchCamel.jpg" alt="Katanukiya">
+        <img src="images/FlatStyleCamel.jpg" alt="Katanukiya">
+        <img src="images/CuteCamel.jpg" alt="Katanukiya">
+        <img src="images/IconicDubai.jpg" alt="Katanukiya">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer (fixed full width) ================== -->
+  <footer style="width:100%; margin:0; padding:30px 50px; text-align:center; background-color:#000; color:#fff; box-sizing:border-box;">
+    <p style="margin:0;">&copy; 2025 GrapeTree. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" style="color:#fff; text-decoration:none; margin:0 10px;">Instagram</a> |
+      <a href="#" style="color:#fff; text-decoration:none; margin:0 10px;">Facebook</a> |
+      <a href="#" style="color:#fff; text-decoration:none; margin:0 10px;">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  const productItem = document.querySelector('.nav-list li:nth-child(2)');
+
+  // Burger toggle
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+  });
+
+  // Toggle sub-list
+  productItem.addEventListener('click', () => {
+    productItem.classList.toggle('open');
+  });
+</script>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swipers -->
+  <script>
+    const delays = [3000, 4000];
+    for (let i = 1; i <= 2; i++) {
+      new Swiper(`.mySwiper${i}`, {
+        loop: true,
+        autoplay: { delay: delays[i - 1], disableOnInteraction: false },
+        slidesPerView: 1,
+        spaceBetween: 20,
+      });
+    }
+  </script>
+
+</body>
+</html>

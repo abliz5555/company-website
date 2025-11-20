@@ -19,60 +19,88 @@
 
   <!-- Swiper Slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+  <style>
+    /* ------------------ Company Overview ------------------ */
+    .company-overview {
+        max-width: 1100px;
+        margin: 80px auto;
+        padding: 0 24px;
+        text-align: center;
+    }
+
+    
+    .overview-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        letter-spacing: 1px;
+    }
+
+    .overview-text {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 25px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0;
+        transform: translateY(25px);
+        transition: all 0.7s ease;
+    }
+
+    /* Visible when scrolled */
+    .overview-text.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+ <header>
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <div class="logo">
-        <div class="company-logo">
-            <img src="company-logo.svg" alt="GrapeTree">
-        </div>
+  <div class="logo">
+    <div class="company-logo">
+      <img src="images/company-logo.svg" alt="GrapeTree">
     </div>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="Philosophy.html">Philosophy</a></li>
-        </ul>
-    </nav>
-
-    <div class="header-icons">
-        <a href="account.html" class="icon">👤</a>
-        <a href="cart.html" class="icon">🛒</a>
-    </div>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-
-
-  <!-- Hero Slider -->
   <section class="hero">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image: url('images/slide1.jpg');">
           <div class="slide-text">
-            <h2>Handcrafted Sweets</h2>
-            <p>Delicious treats for every occasion</p>
+
           </div>
         </div>
         <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
           <div class="slide-text">
-            <h2>Gifts for Your Loved Ones</h2>
-            <p>Beautifully packaged and ready to gift</p>
+
           </div>
         </div>
         <div class="swiper-slide" style="background-image: url('images/slide3.jpg');">
           <div class="slide-text">
-            <h2>Premium Quality Ingredients</h2>
-            <p>Fresh and delicious in every bite</p>
+
           </div>
         </div>
       </div>
@@ -82,25 +110,45 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
-
-  
-    
   </section>
 
-<!-- Featured Products -->
+ <!-- =================== Company Overview =================== -->
+<section class="company-overview">
+    <div class="overview-container">
+
+        <h2 class="overview-title">About Grape Tree FZE</h2>
+
+        <p class="overview-text">
+            <strong>Grape Tree FZE</strong>, established in 2024 in Sharjah Airport Free Zone, UAE, is a luxury gifting brand specializing in premium confectionery. Our signature products include <strong>Katanukiya</strong> and the new <strong>GildArt Golden Chocolate</strong>, crafted for the discerning luxury market. 
+        </p>
+
+        <p class="overview-text">
+            We are proudly part of our parent company, <strong>Budonomori Co. Ltd</strong>, established in 1982 in Ishikawa, Japan. Rooted in the spirit of hospitality and craftsmanship, Budonomori operates across multiple business domains including restaurants, weddings, confectionery, and specialty retail. 
+        </p>
+
+        <p class="overview-text">
+            With our unique products and attention to detail, <strong>Grape Tree FZE</strong> delivers unforgettable experiences through luxury gifting, combining the heritage of our Japanese parent company with modern innovation and creativity in the UAE.
+        </p>
+
+    </div>
+</section>
+
+
+ <!-- Featured Products -->
 <section class="featured-products">
   <h2>Our Products</h2>
   <div class="partner-cards-grid">
 
-    <a href="shop.html" class="partner-card">
+    <!-- Only change: href points to section id on product page -->
+    <a href="product.html#cake-product" class="partner-card">
       <div class="card-media">
-        <img src="cake-logo.svg" class="card-img" alt="Cut Out Cake">
+        <img src="images/cake-logo.svg" class="card-img" alt="Cut Out Cake">
       </div>
     </a>
 
-    <a href="shop.html" class="partner-card">
+    <a href="product.html#chocolate-product" class="partner-card">
       <div class="card-media">
-        <img src="chocolate-logo.svg" class="card-img" alt="Chocolate">
+        <img src="images/chocolate-logo.svg" class="card-img" alt="Chocolate">
       </div>
     </a>
 
@@ -139,7 +187,7 @@
       },
     });
   </script>
-
+  
 
   <!-- Mobile Menu Toggle -->
   <script>
@@ -151,7 +199,21 @@
       menuToggle.classList.toggle('open');
     });
   </script>
-  
-  
+
+  <!-- Company Overview Scroll Animation -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    });
+
+    document.querySelectorAll('.overview-text').forEach(text => {
+        observer.observe(text);
+    });
+  </script>
+
 </body>
 </html>
