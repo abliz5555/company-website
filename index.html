@@ -85,34 +85,44 @@
     </ul>
   </nav>
 </header>
-  <section class="hero">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url('images/cake11.jpg');">
-          <div class="slide-text">
 
-          </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url('images/slide2.jpg');">
-          <div class="slide-text">
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
 
-          </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url('images/slider5.jpeg');">
-          <div class="slide-text">
-
-          </div>
-        </div>
+      <div class="swiper-slide" style="background-image: url('images/header1.jpg');">
+        <div class="slide-text"></div>
       </div>
 
-      <!-- Navigation Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+      <div class="swiper-slide" style="background-image: url('images/header2.jpg');">
+        <div class="slide-text"></div>
+      </div>
 
- <!-- =================== Company Overview =================== -->
+      <div class="swiper-slide" style="background-image: url('images/header3.jpg');">
+        <div class="slide-text"></div>
+      </div>
+
+      <!-- FIXED -->
+      <div class="swiper-slide" style="background-image: url('images/header4.jpg');">
+        <div class="slide-text"></div>
+      </div>
+
+      <!-- FIXED -->
+      <div class="swiper-slide" style="background-image: url('images/header5.jpg');">
+        <div class="slide-text"></div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- COMPANY OVERVIEW -->
 <section class="company-overview">
     <div class="overview-container">
 
@@ -133,13 +143,12 @@
     </div>
 </section>
 
-
- <!-- Featured Products -->
+<!-- Featured Products -->
 <section class="featured-products">
   <h2>Our Products</h2>
+
   <div class="partner-cards-grid">
 
-    <!-- Only change: href points to section id on product page -->
     <a href="product.html#cake-product" class="partner-card">
       <div class="card-media">
         <img src="images/cake-logo.svg" class="card-img" alt="Cut Out Cake">
@@ -155,65 +164,62 @@
   </div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 GrapeTree. All rights reserved.</p>
+  <div class="social-links">
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Twitter</a>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 GrapeTree. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">Twitter</a>
-    </div>
-  </footer>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <!-- JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+</script>
 
-  <!-- Initialize Slider -->
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+<!-- Mobile Menu Toggle -->
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('header nav ul');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
+</script>
+
+<!-- Scroll Animation -->
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
     });
-  </script>
-  
+});
 
-  <!-- Mobile Menu Toggle -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navList = document.querySelector('header nav ul');
-
-    menuToggle.addEventListener('click', () => {
-      navList.classList.toggle('active');
-      menuToggle.classList.toggle('open');
-    });
-  </script>
-
-  <!-- Company Overview Scroll Animation -->
-  <script>
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    });
-
-    document.querySelectorAll('.overview-text').forEach(text => {
-        observer.observe(text);
-    });
-  </script>
+document.querySelectorAll('.overview-text').forEach(text => {
+    observer.observe(text);
+});
+</script>
 
 </body>
 </html>
