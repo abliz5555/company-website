@@ -33,12 +33,12 @@
     .contact-hero {
       text-align: center;
       padding: 80px 20px 40px 20px;
-      background-color: #fdf5e6;
+      background-color: #c7c7c7;
     }
     .contact-hero h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 48px;
-      color: #1f3a93;
+      color: #333;
       margin-bottom: 20px;
     }
     .contact-hero p {
@@ -63,7 +63,7 @@
       flex: 1;
       min-width: 250px;
       max-width: 300px;
-      background: linear-gradient(135deg, #1f3a93, #4a90e2);
+      background: linear-gradient(135deg, #1c1c1e, #3a3a3c);
       color: #fff;
       padding: 40px 20px;
       border-radius: 20px;
@@ -78,7 +78,7 @@
     .contact-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      background: linear-gradient(135deg, #4a90e2, #1f3a93);
+      background: linear-gradient(135deg, #2c2c2e, #48484a, #1c1c1e);
     }
 
     .contact-card i {
@@ -120,6 +120,7 @@
         top: 0;
       }
     }
+    
   </style>
 </head>
 <body>
@@ -160,19 +161,19 @@
 
   <!-- Contact Cards Section -->
   <section class="contact-cards">
-    <a class="contact-card" href="mailto:info@grapetree.com">
+    <a class="contact-card" href="mailto:info@grapetree.ae">
       <i class="fas fa-envelope"></i>
       <h3 style="font-family: 'Orbitron', sans-serif;">Email Us</h3>
       <p>Send us an email and we will respond promptly.</p>
     </a>
 
-    <a class="contact-card" href="https://wa.me/971501234567" target="_blank">
+    <a class="contact-card" href="https://wa.me/971555577478" target="_blank">
       <i class="fab fa-whatsapp"></i>
       <h3 style="font-family: 'Orbitron', sans-serif;">Chat on WhatsApp</h3>
       <p>Message us directly on WhatsApp for quick responses.</p>
     </a>
 
-    <a class="contact-card" href="tel:+971501234567">
+    <a class="contact-card" href="tel:+971555577478">
       <i class="fas fa-phone-alt"></i>
       <h3 style="font-family: 'Orbitron', sans-serif;">Call Us</h3>
       <p>Give us a call and speak directly with our team.</p>
@@ -181,16 +182,60 @@
 </main>
 
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 GrapeTree. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">Twitter</a>
-    </div>
-  </footer>
+ <!-- FOOTER -->
+<footer style="padding:40px 20px; text-align:center;">
 
+  <p style="margin-bottom:25px;">&copy; 2025 GrapeTree. All rights reserved.</p>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap; align-items:center;">
+
+    <!-- QR 1 -->
+    <div style="display:flex; flex-direction:column; align-items:center;">
+
+      <a href="https://instagram.com/gildart_official" target="_blank">
+        <img src="images/QR-code.png"
+             style="width:120px; height:120px;">
+      </a>
+
+      <p style="
+        margin-top:10px;
+        font-weight:700;
+        font-family:'Montserrat', sans-serif;
+        background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      ">
+        @gildart_official
+      </p>
+
+    </div>
+
+    <!-- QR 2 -->
+    <div style="display:flex; flex-direction:column; align-items:center;">
+
+      <a href="https://instagram.com/katanukiya_uae" target="_blank">
+        <img src="images/QR-katanukiya.jpg"
+             style="width:120px; height:120px;">
+      </a>
+
+      <p style="
+        margin-top:10px;
+        font-weight:700;
+        font-family:'Montserrat', sans-serif;
+        background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      ">
+        @katanukiya_uae
+      </p>
+
+    </div>
+
+  </div>
+</footer>
   <!-- Mobile Menu Toggle -->
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
